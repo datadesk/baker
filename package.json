@@ -42,6 +42,7 @@
     "postcss": "^7.0.17",
     "postcss-flexbugs-fixes": "^4.1.0",
     "quaff": "^4.1.0",
+    "rev-path": "^2.0.0",
     "sass": "^1.22.0"
   },
   "devDependencies": {
