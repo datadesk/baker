@@ -9,6 +9,9 @@
     {% script 'main' %}
   </head>
   <body>
+    {% include 'header.njk' %}
     {% block content %}{% endblock content %}
+
+    {% script 'main', 'legacy' %}
   </body>
 </html>

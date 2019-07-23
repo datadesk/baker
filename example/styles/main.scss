@@ -1,5 +1,7 @@
 @import 'variables';
+@import 'type';
 
 body {
   background-color: $color;
+  font-family: $font-family;
 }

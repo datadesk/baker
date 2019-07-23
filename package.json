@@ -14,7 +14,7 @@
   "scripts": {
     "build": "./bin/bake.js build --input example",
     "git-pre-commit": "precise-commits",
-    "start": "./bin/bake.js serve --input example"
+    "start": "NODE_ENV=development ./bin/bake.js serve --input example"
   },
   "repository": {
     "type": "git",
