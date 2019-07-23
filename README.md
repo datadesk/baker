@@ -6,11 +6,11 @@ Having said that, feel free to to clone this repo and poke around.
 
 ## Setting up
 
-This project assumes you already have Node.js and the Yarn package manager installed. First clone this repo, then install the dependencies using Yarn.
+This project assumes you already have Node.js installed. First clone this repo, then install the dependencies using `npm`.
 
 ```sh
 # install dependencies
-yarn
+npm install
 ```
 
 ## Usage
@@ -20,13 +20,13 @@ Everything in the `example/` directory is our "test" project, and the npm script
 To pretend you are developing this project, run the `start` command. This should spin up a server and give you a URL to visit.
 
 ```sh
-yarn start
+npm start
 ```
 
 To pretend you are building the project, run the `build` command.
 
 ```sh
-yarn build
+npm run build
 ```
 
 Everything that is produced will go into the default output directory. For the example project, this will be the `example/_dist` directory.
