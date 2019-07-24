@@ -1,35 +1,25 @@
-# The Second Bake
+<h1 align="center">
+  @datadesk/bakery
+</h1>
+<p align="center">
+  <a href="https://www.npmjs.org/package/@datadesk/bakery"><img src="https://badgen.net/npm/v/@datadesk/bakery" alt="npm"></a>
+  <a href="https://david-dm.org/datadesk/bakery"><img src="https://badgen.net/david/dep/datadesk/bakery" alt="dependencies"></a>
+  <a href="https://packagephobia.now.sh/result?p=@datadesk/bakery"><img src="https://badgen.net/packagephobia/install/@datadesk/bakery" alt="install size"></a>
+</p>
 
-This is a workspace repository for the grand reworking of Big Builder. It is in **no way** ready for prime time and carries no promise of being remotely functional at any given time.
+`@datadesk/bakery` is a build tool for projects by the Los Angeles Times Data Desk and friends.
 
-Having said that, feel free to to clone this repo and poke around.
+## Installation
 
-## Setting up
-
-This project assumes you already have Node.js installed. First clone this repo, then install the dependencies using `npm`.
+`@datadesk/bakery` is available via `npm`.
 
 ```sh
-# install dependencies
-npm install
+npm install -D @datadesk/bakery
 ```
 
 ## Usage
 
-Everything in the `example/` directory is our "test" project, and the npm scripts currently point at this directory for running the commands.
-
-To pretend you are developing this project, run the `start` command. This should spin up a server and give you a URL to visit.
-
-```sh
-npm start
-```
-
-To pretend you are building the project, run the `build` command.
-
-```sh
-npm run build
-```
-
-Everything that is produced will go into the default output directory. For the example project, this will be the `example/_dist` directory.
+TK TK
 
 ## License
 

@@ -1,8 +1,7 @@
 {
   "name": "@datadesk/bakery",
-  "private": true,
   "version": "0.0.0",
-  "description": "A build tool for projects by the Los Angeles Times Data Desk and friends.",
+  "description": "A build tool for projects by the Los Angeles Times Data Desk and friends",
   "main": "lib/index.js",
   "files": [
     "bin",
@@ -21,7 +20,9 @@
     "url": "git+https://github.com/datadesk/bakery.git"
   },
   "keywords": [
-    "templating"
+    "templates",
+    "static",
+    "generator"
   ],
   "author": "Ryan Murphy",
   "license": "MIT",
