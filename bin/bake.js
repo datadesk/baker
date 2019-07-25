@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 
 // packages
+const colors = require('ansi-colors');
 const mri = require('mri');
 
 // local
 const { Bakery } = require('../lib');
+const { logErrorMessage } = require('../lib/utils');
 
 const mriConfig = {
   default: {
+    entrypoints: 'scripts/app.js',
     input: process.cwd(),
     output: '_dist',
     layouts: '_layouts',
@@ -27,7 +30,16 @@ async function main(argv_) {
   switch (command) {
     case 'bake':
     case 'build':
-      bakery.bake();
+      try {
+        await bakery.bake();
+
+        console.log(colors.bold.green('The build was a success!'));
+      } catch (err) {
+        console.log(
+          colors.bold.red("Build failed. Here's what possibly went wrong:\n")
+        );
+        logErrorMessage(err);
+      }
       break;
     case 'serve':
       bakery.serve();

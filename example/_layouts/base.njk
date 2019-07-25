@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>This is the title.</title>
     <link rel="stylesheet" href="{% static 'styles/main.scss' %}">
-    {% script 'main' %}
+    {% script 'app' %}
   </head>
   <body>
     {% include 'header.njk' %}
     {% block content %}{% endblock content %}
 
-    {% script 'main', 'legacy' %}
+    {% script 'app', 'legacy' %}
   </body>
 </html>
