@@ -36,6 +36,7 @@
     "@babel/preset-env": "^7.5.3",
     "ansi-colors": "^4.1.1",
     "autoprefixer": "^9.6.1",
+    "babel-plugin-transform-async-to-promises": "^0.8.13",
     "browser-sync": "^2.26.7",
     "chokidar": "^3.0.2",
     "clean-css": "^4.2.1",
