@@ -7,7 +7,4 @@ const nodeEnv =
   NODE_ENV && VALID_NODE_ENVS.includes(NODE_ENV) ? NODE_ENV : DEFAULT_NODE_ENV;
 const isProductionEnv = nodeEnv === 'production';
 
-module.exports = {
-  isProductionEnv,
-  nodeEnv,
-};
+export { isProductionEnv, nodeEnv };

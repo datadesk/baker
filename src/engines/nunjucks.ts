@@ -1,22 +1,30 @@
 // native
-const path = require('path');
+import * as path from 'path';
 
 // packages
-const fs = require('fs-extra');
-const {
+import fs from 'fs-extra';
+import {
   Environment,
   FileSystemLoader,
   NodeResolveLoader,
   runtime,
   Template,
-} = require('nunjucks');
+} from 'nunjucks';
 
 // local
-const { BaseEngine } = require('./base');
+const { Engine } = require('./base');
 const { isProductionEnv } = require('../env');
 
-class NunjucksEngine extends BaseEngine {
-  constructor({ layouts, ...args }) {
+interface NunjucksContext {
+  [key: string]: string;
+}
+
+class NunjucksEngine extends Engine {
+  layouts: string;
+  env: Environment;
+  context: NunjucksContext;
+
+  constructor({ layouts, ...args }: { layouts: string }) {
     super(args);
 
     // the directory where Nunjucks templates and includes can be found
@@ -57,16 +65,16 @@ class NunjucksEngine extends BaseEngine {
     return path.join(pathname, 'index.html');
   }
 
-  async compile(file) {
+  async compile(file: string) {
     // read the raw string
     const raw = await fs.readFile(file, 'utf8');
 
     // create the template
     const template = new Template(raw, this.env, path.resolve(file));
 
-    return function render(context) {
+    return function render(context: NunjucksContext) {
       return new Promise((resolve, reject) => {
-        template.render(context, (err, text) => {
+        template.render(context, (err: Error, text: string) => {
           if (err) reject(err);
 
           resolve(text);
@@ -85,7 +93,7 @@ class NunjucksEngine extends BaseEngine {
     return this.__minifier__;
   }
 
-  async render(file) {
+  async render(file: string) {
     // compile the Nunjucks template
     const render = await this.compile(file);
 
@@ -101,7 +109,7 @@ class NunjucksEngine extends BaseEngine {
     return results;
   }
 
-  addCustomFilter(name, fn) {
+  addCustomFilter(name: string, fn: Function) {
     this.env.addFilter(name, fn);
   }
 
@@ -113,6 +121,8 @@ class NunjucksEngine extends BaseEngine {
 
   addCustomTag(name, fn) {
     class CustomTag {
+      tags: string[];
+
       constructor() {
         this.tags = [name];
       }
@@ -189,7 +199,7 @@ class NunjucksEngine extends BaseEngine {
    * @param {string} filepath The path to the file to render
    * @param {*} context An object to be provided as context to the template
    */
-  static async renderOnly(filepath, context) {
+  static async renderOnly(filepath: string, context: NunjucksContext) {
     // read the raw string
     const raw = await fs.readFile(filepath, 'utf8');
 
@@ -198,7 +208,7 @@ class NunjucksEngine extends BaseEngine {
 
     // resolve the render
     return new Promise((resolve, reject) => {
-      template.render(context, (err, text) => {
+      template.render(context, (err: Error, text: string) => {
         if (err) reject(err);
 
         resolve(text);

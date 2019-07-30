@@ -10,11 +10,11 @@ const optipng = require('imagemin-optipng');
 const svgo = require('imagemin-svgo');
 
 // local
-const { BaseEngine } = require('./base');
+const { Engine } = require('./base');
 const { isProductionEnv } = require('../env');
 const { getRevHash } = require('../utils');
 
-class ImagesEngine extends BaseEngine {
+class ImagesEngine extends Engine {
   constructor({ ...args }) {
     super(args);
 

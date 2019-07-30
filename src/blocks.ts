@@ -1,18 +1,19 @@
 // native
-const path = require('path');
+import * as path from 'path';
 
 // packages
-const fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
 // local
-const { isProductionEnv } = require('./env');
+import { Engine } from './engines/base';
+import { isProductionEnv } from './env';
 
-function createStaticBlock(pathPrefix, sources) {
-  return function static(file) {
+function createStaticBlock(pathPrefix: string, engines: Engine[]) {
+  return function staticBlock(file: string) {
     // first we try to find it in our sources
-    for (const source of sources) {
-      if (file in source.manifest) {
-        return path.resolve(pathPrefix, source.manifest[file]);
+    for (const engine of engines) {
+      if (file in engine.manifest) {
+        return path.resolve(pathPrefix, engine.manifest[file]);
       }
     }
 
@@ -28,9 +29,9 @@ function createStaticBlock(pathPrefix, sources) {
   };
 }
 
-function createScriptBlock(pathPrefix, source) {
-  return function script(entry, type = 'modern') {
-    const { manifest } = source;
+function createScriptBlock(pathPrefix: string, engine: Engine) {
+  return function script(entry: string, type = 'modern') {
+    const { manifest } = engine;
     const output = [];
 
     if (type === 'legacy') {
@@ -59,7 +60,7 @@ function createScriptBlock(pathPrefix, source) {
   };
 }
 
-async function inject(filepath, cb) {
+async function inject(filepath: string, cb: Function) {
   try {
     const contents = await fs.readFile(filepath, 'utf8');
 

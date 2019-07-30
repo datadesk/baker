@@ -1,15 +1,29 @@
 // packages
-const colors = require('ansi-colors');
-const hasha = require('hasha');
+import colors from 'ansi-colors';
+import hasha from 'hasha';
 
+/**
+ * A helper noop function.
+ */
 function noop() {}
 
-function getRevHash(input) {
+/**
+ * Generates the 8 character md5 hash of a string.
+ *
+ * @param input The string to hash
+ */
+function getRevHash(input: string) {
   return hasha(input, { algorithm: 'md5' }).slice(0, 8);
 }
 
+/**
+ * Cache a check of whether we are in an interactive terminal.
+ */
 const isInteractive = process.stdout.isTTY;
 
+/**
+ * Clears the terminal if it is interactive.
+ */
 function clearConsole() {
   if (isInteractive) {
     process.stdout.write(
@@ -18,7 +32,16 @@ function clearConsole() {
   }
 }
 
-function printInstructions({ external, local }) {
+/**
+ * Prints out the local and external IP's during a serve.
+ */
+function printInstructions({
+  external,
+  local,
+}: {
+  external: string;
+  local: string;
+}) {
   console.log();
   console.log('You can now view your project in your browser!');
   console.log();
@@ -34,7 +57,20 @@ function printInstructions({ external, local }) {
   console.log();
 }
 
-function logErrorMessage(err) {
+/**
+ * A standard Error interface with an extra field called "frame".
+ */
+interface EnhancedError extends Error {
+  /** Some of our libaries add extra values to Errors called "frame". */
+  frame?: string;
+}
+
+/**
+ * Logs a collection of errors to the terminal.
+ *
+ * @param err An individual error or array of errors to log
+ */
+function logErrorMessage(err: EnhancedError | EnhancedError[]) {
   if (!Array.isArray(err)) err = [err];
 
   err.forEach(e => {
@@ -52,17 +88,17 @@ function logErrorMessage(err) {
   console.log('\n');
 }
 
-function onError(type, err) {
+function onError(type: string, err: EnhancedError) {
   console.log(colors.red(`${type} failed to compile.\n`));
   logErrorMessage(err);
 }
 
-function onWarning(type, err) {
+function onWarning(type: string, err: EnhancedError) {
   console.log(colors.yellow(`${type} compiled with warnings.\n`));
   logErrorMessage(err);
 }
 
-module.exports = {
+export {
   clearConsole,
   getRevHash,
   logErrorMessage,

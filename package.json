@@ -2,13 +2,14 @@
   "name": "@datadesk/bakery",
   "version": "0.0.0",
   "description": "A build tool for projects by the Los Angeles Times Data Desk and friends",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
-    "bin",
-    "lib"
+    "dist",
+    "src"
   ],
   "bin": {
-    "bake": "./bin/bake.js"
+    "bake": "./dist/cli.js"
   },
   "scripts": {
     "build": "./bin/bake.js build --input example",
@@ -70,9 +71,13 @@
   },
   "devDependencies": {
     "@datadesk/prettier-config": "^1.0.0",
+    "@types/fs-extra": "^8.0.0",
+    "@types/lodash": "^4.14.136",
+    "@types/nunjucks": "^3.1.1",
     "@zeit/git-hooks": "^0.1.4",
     "precise-commits": "^1.0.2",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "typebundle": "^0.3.0"
   },
   "prettier": "@datadesk/prettier-config"
 }

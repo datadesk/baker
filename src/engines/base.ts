@@ -1,26 +1,33 @@
 // native
-const path = require('path');
+import * as path from 'path';
 
 // packages
-const chokidar = require('chokidar');
-const debounce = require('lodash.debounce');
-const fs = require('fs-extra');
-const glob = require('fast-glob');
+import chokidar from 'chokidar';
+import debounce from 'lodash.debounce';
+import * as fs from 'fs-extra';
+import glob from 'fast-glob';
 
 // local
-const { noop } = require('../utils');
+import { noop } from '../utils';
+
+interface Manifest {
+  [key: string]: string;
+}
 
 /**
  * The base builder engine for all asset types. For most engines this will
  * handle the majority of tasks.
  */
-class BaseEngine {
-  /**
-   * @param {object} options
-   * @param {string} options.input
-   * @param {string} options.output
-   */
-  constructor({ input, output }) {
+export class Engine {
+  input: string;
+  output: string;
+  filePattern: string;
+  watchFilePattern: string;
+  ignorePattern: string[];
+  manifest: Manifest;
+  dependencies: Set<string>;
+
+  constructor({ input, output }: { input: string; output: string }) {
     // the input directory
     this.input = input;
 
@@ -49,20 +56,31 @@ class BaseEngine {
     });
   }
 
-  addDependency(file) {
+  /**
+   * Add a file to the dependency tracker for this Engine.
+   *
+   * @param file The file to add to the dependency tracker
+   */
+  addDependency(file: string) {
     this.dependencies.add(file);
   }
 
+  /**
+   * Get all the unique dependencies for this Engine as an array.
+   */
   getDependencies() {
     return Array.from(this.dependencies);
   }
 
+  /**
+   * Clear out the manifest and dependencies on this Engine.
+   */
   invalidate() {
     this.manifest = {};
     this.dependencies.clear();
   }
 
-  async build(args) {
+  async build(args: any) {
     // clear out the dependencies and manifest
     this.invalidate();
 
@@ -133,5 +151,3 @@ class BaseEngine {
     });
   }
 }
-
-module.exports = { BaseEngine };
