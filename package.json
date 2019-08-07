@@ -13,6 +13,7 @@
   "scripts": {
     "build": "./bin/bake.js build --input example",
     "git-pre-commit": "precise-commits",
+    "release": "np --no-yarn",
     "start": "NODE_ENV=development ./bin/bake.js serve --input example"
   },
   "repository": {
@@ -71,6 +72,7 @@
   "devDependencies": {
     "@datadesk/prettier-config": "^1.0.0",
     "@zeit/git-hooks": "^0.1.4",
+    "np": "^5.0.3",
     "precise-commits": "^1.0.2",
     "prettier": "^1.18.2"
   },
