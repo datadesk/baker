@@ -3,4 +3,8 @@
 {% block content %}
   <img src="{% static 'images/corgi.jpg' %}">
   Our favorite type of dog is {{ meta.breed }} {{ "5000"|intcomma }}.
+
+  {% if NODE_ENV == 'production' %}
+  We are in production!
+  {% endif %}
 {% endblock content %}
