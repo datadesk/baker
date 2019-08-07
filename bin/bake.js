@@ -5,7 +5,7 @@ const colors = require('ansi-colors');
 const mri = require('mri');
 
 // local
-const { Bakery } = require('../lib');
+const { Baker } = require('../lib');
 const { logErrorMessage } = require('../lib/utils');
 
 const mriConfig = {
@@ -25,13 +25,13 @@ async function main(argv_) {
   // we only care about the first command, anything else is whatever
   const command = _[0];
 
-  const bakery = new Bakery(flags);
+  const baker = new Baker(flags);
 
   switch (command) {
     case 'bake':
     case 'build':
       try {
-        await bakery.bake();
+        await baker.bake();
 
         console.log(colors.bold.green('The build was a success!'));
       } catch (err) {
@@ -42,7 +42,7 @@ async function main(argv_) {
       }
       break;
     case 'serve':
-      bakery.serve();
+      baker.serve();
   }
 }
 

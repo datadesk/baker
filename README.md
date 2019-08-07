@@ -1,20 +1,20 @@
 <h1 align="center">
-  @datadesk/bakery
+  @datadesk/baker
 </h1>
 <p align="center">
-  <a href="https://www.npmjs.org/package/@datadesk/bakery"><img src="https://badgen.net/npm/v/@datadesk/bakery" alt="npm"></a>
-  <a href="https://david-dm.org/datadesk/bakery"><img src="https://badgen.net/david/dep/datadesk/bakery" alt="dependencies"></a>
-  <a href="https://packagephobia.now.sh/result?p=@datadesk/bakery"><img src="https://badgen.net/packagephobia/install/@datadesk/bakery" alt="install size"></a>
+  <a href="https://www.npmjs.org/package/@datadesk/baker"><img src="https://badgen.net/npm/v/@datadesk/baker" alt="npm"></a>
+  <a href="https://david-dm.org/datadesk/baker"><img src="https://badgen.net/david/dep/datadesk/baker" alt="dependencies"></a>
+  <a href="https://packagephobia.now.sh/result?p=@datadesk/baker"><img src="https://badgen.net/packagephobia/install/@datadesk/baker" alt="install size"></a>
 </p>
 
-`@datadesk/bakery` is a build tool for projects by the Los Angeles Times Data Desk and friends.
+`@datadesk/baker` is a build tool for projects by the Los Angeles Times Data Desk and friends.
 
 ## Installation
 
-`@datadesk/bakery` is available via `npm`.
+`@datadesk/baker` is available via `npm`.
 
 ```sh
-npm install -D @datadesk/bakery
+npm install -D @datadesk/baker
 ```
 
 ## Usage
