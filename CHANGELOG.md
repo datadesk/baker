@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The serve task now runs all the engines in an initial pass before activating the server. This ensures that the local development URL is not presented as available before it truly is.
+
+## [0.1.0] - 2019-08-07
+
 ### Added
 
 - Initial release
