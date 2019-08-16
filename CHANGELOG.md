@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2019-08-16
+
 ### Fixed
 
 - A `pathPrefix` should always have a leading slash to ensure pathing resolution works.
