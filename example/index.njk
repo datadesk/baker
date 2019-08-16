@@ -1,7 +1,7 @@
 {% extends 'base.njk' %}
 
 {% block content %}
-  <img src="{% static 'images/corgi.jpg' %}">
+  <img src="{% static 'assets/images/corgi.jpg' %}">
   Our favorite type of dog is {{ meta.breed }} {{ "5000"|intcomma }}.
 
   {% if NODE_ENV == 'production' %}
