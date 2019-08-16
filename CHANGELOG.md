@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2019-08-16
+
 ### Added
 
 - Added `AssetsEngine` for management of generic assets files in a build. By default it looks for an `assets` directory in the input directory.
