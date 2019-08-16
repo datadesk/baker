@@ -15,6 +15,7 @@ const mriConfig = {
     output: '_dist',
     layouts: '_layouts',
     data: '_data',
+    assets: 'assets',
     pathPrefix: '/',
   },
 };
