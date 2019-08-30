@@ -67,7 +67,7 @@
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^5.1.1",
     "sass": "^1.22.9",
-    "systemjs": "^5.0.0"
+    "systemjs": "^6.0.0"
   },
   "devDependencies": {
     "@datadesk/prettier-config": "^1.0.0",
