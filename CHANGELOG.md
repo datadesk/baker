@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2019-09-03
+
 ### Added
 
 - Legacy script builds now use `core-js` to polyfill and add features that may be missing in those browsers. This will likely cause the `iife` build to be bigger than it should be, but this prevents users from having to whack-a-mole issues with IE 11. It should just work.
