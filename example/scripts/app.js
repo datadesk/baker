@@ -1,6 +1,6 @@
 import { intcomma } from 'journalize';
 
-console.log('hello');
+console.log('goodbye');
 
 function main() {
   console.log(intcomma(5432));

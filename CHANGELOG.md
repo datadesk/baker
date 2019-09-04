@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Legacy script builds now use `core-js` to polyfill and add features that may be missing in those browsers. This will likely cause the `iife` build to be bigger than it should be, but this prevents users from having to whack-a-mole issues with IE 11. It should just work.
+- Polyfills for both the modern and legacy are automatically inserted into every entrypoint, with the assumption there's a base set of features we should expect to be there. For modern builds, it's support for dynamic imports and IntersectionObserver. For legacy builds, it's fetch, Element.classList and IntersectionObserver.
+
+### Changed
+
+- The engine for Rollup has been rewritten to be much smarter about how it navigates modern and legacy builds. This also does away with SystemJS in favor of native modules for browsers that support it, and an `iife` build for browsers that do not.
+
 ## [0.3.0] - 2019-08-16
 
 ### Added
