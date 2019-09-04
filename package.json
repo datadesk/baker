@@ -1,6 +1,6 @@
 {
   "name": "@datadesk/baker",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A build tool for projects by the Los Angeles Times Data Desk and friends",
   "main": "lib/index.js",
   "files": [
