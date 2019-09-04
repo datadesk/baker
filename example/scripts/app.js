@@ -1,2 +1,9 @@
-console.log('Hello, world!');
-console.log(process.env.PATH_PREFIX);
+import { intcomma } from 'journalize';
+
+console.log('goodbye');
+
+function main() {
+  console.log(intcomma(5432));
+}
+
+main();
