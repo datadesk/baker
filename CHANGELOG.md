@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2019-09-04
+
+### Added
+
+- Nunjucks templates now have a better error logger. It's not perfect, but should help find specific lines causing issues.
+- Template files in the layout directory are now watched during a serve - if any changes are made templates are regenerated.
+- Files in the `data` directory are now watched during a serve and will trigger a template build.
+
 ## [0.4.0] - 2019-09-03
 
 ### Added
