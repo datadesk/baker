@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Template files in the layout directory are now watched during a serve - if any changes are made templates are regenerated.
 - Files in the `data` directory are now watched during a serve and will trigger a template build.
 
+### Changed
+
+- This package is now deployed on `npm` at `@datagraphics/baker` instead of `@datadesk/baker`, which has been deprecated.
+
 ## [0.4.0] - 2019-09-03
 
 ### Added
