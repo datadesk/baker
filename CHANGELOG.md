@@ -7,6 +7,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2019-09-17
+
+### Added
+
+- Two custom functions have been added to the `sass` renderer — `static-url` and `static-path`. These are implemented against the Node.js API (and not within a Sass file) because they need to reference the static asset manifests. They are used in the same scenarios as the `{% static %}` block in Nunjucks templates — you need to reference the path to a static asset in your project, but need it to be given the correct hash prefix on production builds.
+
+`static-url` is meant to be a shortcut for anything you'd normally put inside of `url()`, which it will include for you.
+
+_SCSS_
+
+```scss
+body {
+  background-image: static-url('assets/background.png');
+}
+```
+
+_CSS_
+
+```css
+body {
+  background-image: url(/assets/background.123abc.png);
+}
+```
+
+`static-path` only adjusts the path and returns it as a string. This will probably be less used, but it's there as an escape hatch if you need it.
+
+```scss
+body {
+  background-image: url(static-path('assets/background.png'));
+}
+```
+
+_CSS_
+
+```css
+body {
+  background-image: url(/assets/background.123abc.png);
+}
+```
+
+### Changed
+
+- Now only valid images will receive the file hash in production mode. This is imperfect, but better than every random asset getting a hash unnecessarily and causing issues when they're used. (Looking at you, `.gltf` files.) Ideally this would be smarter, but not quite sure how to go about that yet.
+
 ## [0.5.0] - 2019-09-04
 
 ### Added
