@@ -43,6 +43,7 @@
     "classlist-polyfill": "^1.2.0",
     "clean-css": "^4.2.1",
     "core-js": "^3.2.1",
+    "dotenv": "^8.2.0",
     "dynamic-import-polyfill": "^0.1.1",
     "fast-glob": "^3.0.4",
     "fs-extra": "^8.1.0",
