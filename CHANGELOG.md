@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2019-10-18
+
+### Added
+
+- Support for correctly formatted environment variables that are passed to `rollup-plugin-replace` has been added. Any environment variable that begins with `BAKER_` will be read and converted to the `process.env.BAKER_*` format that can be used in JavaScript files. Any environmental variables that do not have a match are ignored.
+
+It's also possible to manage these with a `.env` in the root of your project. The same rule regarding the `BAKER_` prefix applies.
+
 ## [0.6.0] - 2019-09-17
 
 ### Added
