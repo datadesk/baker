@@ -3,6 +3,11 @@
 
 body {
   background-color: $color;
-  background-image: static-url('assets/images/corgi.jpg');
   font-family: $font-family;
+}
+
+.bg-image {
+  background-image: static-url('assets/images/corgi.jpg');
+  width: 400px;
+  height: 400px;
 }

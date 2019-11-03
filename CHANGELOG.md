@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- The Rollup engine now supports both Svelte (`.svelte` files) and Preact (the usage of JSX) as options for JavaScript-based HTML templating.
+
+### Changed
+
+- `browser-sync` has been replaced with [`mini-sync`](https://github.com/rdmurphy/mini-sync). `browser-sync` was one of the largest packages installed in `baker`, and this should lead to quicker install times.
+
+### Removed
+
+- The old legacy Rollup engine has been deleted and the one previously called `rollup2.js` has taken its place.
+
 ## [0.7.0] - 2019-10-18
 
 ### Added
