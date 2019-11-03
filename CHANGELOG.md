@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] - 2019-11-03
+
 ### Added
 
 - The Rollup engine now supports both Svelte (`.svelte` files) and Preact (the usage of JSX) as options for JavaScript-based HTML templating.
