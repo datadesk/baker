@@ -10,12 +10,12 @@ const { logErrorMessage } = require('../lib/utils');
 
 const mriConfig = {
   default: {
+    assets: 'assets',
+    data: '_data',
     entrypoints: 'scripts/app.js',
     input: process.cwd(),
-    output: '_dist',
     layouts: '_layouts',
-    data: '_data',
-    assets: 'assets',
+    output: '_dist',
     pathPrefix: '/',
   },
 };
