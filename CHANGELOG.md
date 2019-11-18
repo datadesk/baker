@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] - 2019-11-18
+
+### Added
+
+- Modern JavaScript builds now use [`@babel/preset-modules`](https://github.com/babel/preset-modules). This should result in even smaller modern bundles that natively support features that already exist in ~85% of browsers.
+
+### Removed
+
+- Automatic web polyfill injection has been removed. It's just too much magic going on, and we shouldn't assume that every single thing will need `fetch` + `intersection-observer` + `classlist` injected into it. (JavaScript features are still polyfilled via `core-js`. In other words if it's something you'd be able to do in Node.js it's handled.) The gains of keeping a few polyfills out of the modern build aren't worth the confusion. However this does mean users are now responsible for importing their own polyfills.
+
 ## [0.8.0] - 2019-11-03
 
 ### Added
