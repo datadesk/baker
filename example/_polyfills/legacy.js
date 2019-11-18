@@ -1,10 +1,8 @@
 // Only polyfill fetch() if we're in a browser
-if (typeof window !== 'undefined') {
-  require('whatwg-fetch');
-}
+import 'whatwg-fetch';
 
 // We want to trust classList will work
-require('classlist-polyfill');
+import 'classlist-polyfill';
 
 // We depend on intersection-observer enough that it should just be assumed as necessary
-require('intersection-observer');
+import 'intersection-observer';
