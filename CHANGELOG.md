@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.0] - 2019-12-03
+
+### Added
+
+- The function that resolves static files is now available on a Baker instance as `getStaticPath`. This enables users of Baker to tap into the file resolution logic however they see fit.
+
 ## [0.9.0] - 2019-11-18
 
 ### Added
