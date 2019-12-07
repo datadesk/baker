@@ -11,7 +11,7 @@
     "bake": "./bin/bake.js"
   },
   "scripts": {
-    "build": "./bin/bake.js build --input example --entrypoints \"scripts/{app,client}.js\" --modernPolyfills \"_polyfills/modern.js\" --legacyPolyfills _polyfills/legacy.js",
+    "build": "./bin/bake.js build --input example --entrypoints \"scripts/{app,client}.js\"",
     "git-pre-commit": "precise-commits",
     "release": "np --no-yarn",
     "start": "NODE_ENV=development ./bin/bake.js serve --input example --entrypoints \"scripts/{app,client}.js\""

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.0] - 2019-12-06
+
+### Added
+
+- Font files (`.woff2`, `.woff`, `.ttf`, `.otf`) are now recognized by `AssetsEngine` and will be included in any hashing.
+
+### Fixed
+
+- Baker now picks up images with without all lowercase extensions and includes them the compression and hashing process.
+
 ## [0.10.0] - 2019-12-03
 
 ### Added
