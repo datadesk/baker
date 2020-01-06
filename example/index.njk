@@ -8,6 +8,8 @@
   <div id="svelte"></div>
   <div id="preact"></div>
 
+  {% static 'styles/main.scss', true %}
+
   {% if NODE_ENV == 'production' %}
   We are in production!
   {% endif %}
