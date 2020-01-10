@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added new built-in `date` filter to Nunjucks, which allows for formatting of an ISO date string or Date object with `date-fns` [formatting function](https://date-fns.org/v2.8.1/docs/format).
+- Added a new parameter to `new Baker` — `domain`. This is used by `staticAbsolute` to prepare absolute project URLs.
+- Added new `staticAbsolute` block, which makes it possible to build absolute URLs to project files.
+
 ## [0.11.0] - 2019-12-06
 
 ### Added

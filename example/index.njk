@@ -3,10 +3,12 @@
 {% block content %}
   Our favorite type of dog is {{ meta.breed }} {{ "5000"|intcomma }}.
 
-  <p>This text should have a different font!</p>
+  <p>This text should have a different font! {{ '2018-05-10'|date('yyyy-MM-dd HH:mm:ss') }}</p>
   <div class="bg-image"></div>
   <div id="svelte"></div>
   <div id="preact"></div>
+
+  {% staticabsolute 'styles/main.scss' %}
 
   {% if NODE_ENV == 'production' %}
   We are in production!
