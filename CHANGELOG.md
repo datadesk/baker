@@ -7,17 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.13.0] - 2020-01-10
+
 ### Added
 
-- The Nunjucks environment now includes a new global called `CURRENT_URL`. This represents the final URL of each generated page that can be used in its template. It's based on a combination of the provided `domain`, `pathPrefix` and non-index.html path of the file itself.
+- The Nunjucks environment now includes a new global named `CURRENT_URL`. This represents the final URL of each generated page that can be used in its template. It's based on a combination of the provided `domain`, `pathPrefix` and clean (without `index.html` appended) path of the output HTML itself.
 
 ## [0.12.0] - 2020-01-09
 
 ### Added
 
 - Added new built-in `date` filter to Nunjucks, which allows for formatting of an ISO date string or Date object with `date-fns` [formatting function](https://date-fns.org/v2.8.1/docs/format).
-- Added a new parameter that can be passed to `new Baker()` — `domain`. This is used by `staticAbsolute` to prepare absolute project URLs.
-- Added new `staticAbsolute` block, which makes it possible to build absolute URLs to project files.
+- Added a new parameter that must be passed to `new Baker()` — `domain`. This is used by `staticabsolute` to prepare absolute project URLs. (May become optional later for scenarios where this doesn't matter.)
+- Added new `staticabsolute` block, which makes it possible to build absolute URLs to project files.
 
 ## [0.11.0] - 2019-12-06
 
