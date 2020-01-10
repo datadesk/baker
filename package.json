@@ -11,7 +11,7 @@
     "bake": "./bin/bake.js"
   },
   "scripts": {
-    "build": "./bin/bake.js build --input example --entrypoints \"scripts/{app,client}.js\" --domain https://www.latimes.com",
+    "build": "./bin/bake.js build --input example --entrypoints \"scripts/{app,client}.js\" --pathPrefix /projects/hello --domain https://www.latimes.com",
     "git-pre-commit": "precise-commits",
     "release": "np --no-yarn",
     "start": "NODE_ENV=development ./bin/bake.js serve --input example --entrypoints \"scripts/{app,client}.js\" --domain https://www.latimes.com"
