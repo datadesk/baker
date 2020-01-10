@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- The Nunjucks environment now includes a new global called `CURRENT_URL`. This represents the final URL of each generated page that can be used in its template. It's based on a combination of the provided `domain`, `pathPrefix` and non-index.html path of the file itself.
+
 ## [0.12.0] - 2020-01-09
 
 ### Added
