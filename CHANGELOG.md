@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.13.1] - 2020-01-10
+
+### Fixed
+
+- `Baker.pathPrefix` is now set to `/` in `development` mode so a passed `pathPrefix` does not break anything in serve mode.
+
 ## [0.13.0] - 2020-01-10
 
 ### Added
