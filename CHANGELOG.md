@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.13.2] - 2020-01-10
+
+### Fixed
+
+- Some `dependencies` got moved to `devDependencies`, meaning you wouldn't have got them on install. Oops.
+
 ## [0.13.1] - 2020-01-10
 
 ### Fixed
