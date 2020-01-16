@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.14.0] - 2020-01-16
+
+### Added
+
+- Video files (`.mp4`, `.webm`) are now recognized by `AssetsEngine` and will be included in any hashing.
+
 ## [0.13.2] - 2020-01-10
 
 ### Fixed
