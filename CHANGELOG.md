@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.15.0] - 2020-01-17
+
+### Added
+
+- Added a reworked `inject` block, which allows for inserting the contents of a file **post** processing directly into the HTML. This is useful for potentially "injecting" CSS or JavaScript into the page.
+
 ## [0.14.0] - 2020-01-16
 
 ### Added
