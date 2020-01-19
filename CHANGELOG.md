@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.16.0] - 2020-01-19
+
+### Added
+
+- Added support for TypeScript (`.ts`, `.tsx`) files in the `scripts` directory via `@babel/preset-typescript`. They are also allowed as `entrypoints` if passed. Actual type-checking is left up to the user, all this does is remove any TypeScript artifacts from the files - BYO `tsconfig.json` and `tsc` calls.
+
 ## [0.15.0] - 2020-01-17
 
 ### Added
