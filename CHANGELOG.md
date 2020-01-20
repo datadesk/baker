@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.16.1] - 2020-01-19
+
+### Fixed
+
+- `@babel/preset-typescript` also needs to know what the JSX pragma is so it knows to ignore it. This patch ensures both `@babel/preset-typescript` and `@babel/plugin-transform-react-jsx` get passed the same one.
+
 ## [0.16.0] - 2020-01-19
 
 ### Added
