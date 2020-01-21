@@ -58,7 +58,7 @@
     "hasha": "^5.0.0",
     "html-minifier": "^4.0.0",
     "imagemin": "^7.0.0",
-    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-optipng": "^7.0.0",
     "imagemin-svgo": "^7.0.0",
