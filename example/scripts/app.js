@@ -1,6 +1,10 @@
 import SvelteApp from './app.svelte';
 
-console.log(process.env.BAKER_DEMO_VAR);
+if (process.env.BAKER_AWS_BUCKET === 'bigbuilder') {
+  console.log('a big build!');
+} else {
+  console.log('not a big build.');
+}
 
 async function main() {
   const { intcomma } = await import('journalize');
