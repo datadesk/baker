@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.17.0] - 2020-02-04
+
+### Added
+
+- `dotenv-expand` has been added to our `.env` file logic, allowing for tapping into existing environment variables to build values `baker` can see. the `BAKER_` prefix is still enforced, however - but this provides a way to morph existing variables into compatible ones.
+
+### Fixed
+
+- The reworked `inject` function from `0.15.0` did not account for local development when a manifest does not exist for `AssetsEngine` output. This has been fixed. It instead will look for the local version of the file in `development` and continue to error out in `production` if the manifest check fails.
+
 ## [0.16.1] - 2020-01-19
 
 ### Fixed
