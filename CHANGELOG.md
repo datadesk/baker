@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.18.2] - 2020-02-05
+
+### Fixed
+
+- The included `preload` via `{% script %}` now passes `crossorigin`.
+
 ## [0.18.1] - 2020-02-05
 
 ### Fixed
