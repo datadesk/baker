@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.18.0] - 2020-02-05
+
+### Added
+
+- It's now possible to pass a second flag to the `{% script %}` block that instructs it to include any scripts that are candidates for preloading. This is recommended in browsers that support `rel=preload` in order to assist the browser in efficiently loading assets. You should **only** use this if something like [Lighthouse](https://developers.google.com/web/tools/lighthouse/) is suggesting it. To activate it, just pass `true` as the second parameter to `{% script %}` and Baker will do the rest.
+
+```html
+{% script 'app', true %}
+```
+
 ## [0.17.0] - 2020-02-04
 
 ### Added
