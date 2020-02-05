@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.18.1] - 2020-02-05
+
+### Fixed
+
+- The preload section of the `{% script %}` block now accounts for the `pathPrefix` and resolves relative to it.
+
 ## [0.18.0] - 2020-02-05
 
 ### Added
