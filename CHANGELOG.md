@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.20.0-alpha.0] - 2020-02-09
+
+### Added
+
+- It's now possible to pass a `staticRoot` path to Baker, which will make every non-HTML engine output into the `staticRoot` **relative** to `output`. This is intented to make multi-page deploys more viable in certain scenarios.
+
 ## [0.19.0] - 2020-02-06
 
 ### Added
