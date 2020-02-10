@@ -17,6 +17,7 @@ const mriConfig = {
     layouts: '_layouts',
     output: '_dist',
     pathPrefix: '/',
+    staticRoot: '',
   },
 };
 
