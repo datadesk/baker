@@ -1,9 +1,10 @@
 import SvelteApp from './app.svelte';
+import list from 'data:meta.breed';
 
 if (process.env.BAKER_AWS_BUCKET === 'bigbuilder') {
   console.log('a big build!');
 } else {
-  console.log('not a big build.');
+  console.log(list);
 }
 
 async function main() {
