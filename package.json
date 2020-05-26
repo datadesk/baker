@@ -65,7 +65,7 @@
     "imagemin-svgo": "^8.0.0",
     "journalize": "^2.2.0",
     "lodash.debounce": "^4.0.8",
-    "mini-sync": "^0.1.0",
+    "mini-sync": "^0.2.0",
     "mri": "^1.1.4",
     "nunjucks": "^3.2.0",
     "object-assign": "^4.1.1",
