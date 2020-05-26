@@ -71,6 +71,7 @@
     "postcss-flexbugs-fixes": "^4.1.0",
     "quaff": "^4.1.0",
     "rev-path": "^2.0.0",
+    "rimraf": "^3.0.2",
     "rollup": "^2.1.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-svelte": "^5.1.1",
