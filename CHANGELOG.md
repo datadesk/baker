@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.20.0] - 2020-06-17
+
 ### Added
 
 A new experimental Rollup plugin has been added to `baker` to provide an additional way to pull primitive values from files in the `_data` folder into JavaScript files. By importing a value from a special `data:*` path you can use the value directly.
