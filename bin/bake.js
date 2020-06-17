@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // packages
-const colors = require('ansi-colors');
+const { bold, green, red } = require('colorette');
 const mri = require('mri');
 
 // local
@@ -35,17 +35,21 @@ async function main(argv_) {
       try {
         await baker.bake();
 
-        console.log(colors.bold.green('The build was a success!'));
+        console.log(green(bold('The build was a success!')));
       } catch (err) {
         console.log(
-          colors.bold.red("Build failed. Here's what possibly went wrong:\n")
+          red(bold("Build failed. Here's what possibly went wrong:\n"))
         );
         logErrorMessage(err);
       }
       break;
     case 'serve':
-      baker.serve();
+      await baker.serve();
   }
 }
 
-main(process.argv).catch(console.error);
+main(process.argv).catch((err) => {
+  console.error(err);
+  // we want to throw a real exit value on crash and burn
+  process.exit(1);
+});
