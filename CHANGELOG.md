@@ -7,6 +7,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+A new experimental Rollup plugin has been added to `baker` to provide an additional way to pull primitive values from files in the `_data` folder into JavaScript files. By importing a value from a special `data:*` path you can use the value directly.
+
+So if there was `meta.json` file in your `_data` folder:
+
+```json
+{
+  "breed": "corgi",
+  "names": ["Abe", "Winston", "Willow"]
+}
+```
+
+Then you could tap into it like this:
+
+```js
+import breed from 'data:meta.breed';
+
+console.log(breed); // "corgi"
+```
+
+However - to prevent any excessively large imports this plugin will prevent the import of anything that's not a primitive value (number, boolean, string, etc.). This means _no_ arrays or objects.
+
+```js
+import names from 'data:meta.names'; // will throw a Rollup error!
+```
+
+### Changed
+
+- `postcss` will now be ran against any CSS in development as well. This prevents the (increasingly) rare case of where a CSS property only has support with a prefix. (`appearance: none` was the driver for this.) This could cryptically break in development and _then_ work in production, which is about as non-ideal as you can get.
+- `fs-extra` has been purged from the library in favor of native `fs.promises` and `rimraf`.
+- The CLI command now throws proper `process.exit()` calls.
+- The dev server (via `mini-sync`) now waits for the initial build to succeed before attempting to serve. This should help prevent partial serves and throw more helpful errors if there is something critically wrong without leaving the dev server in limbo.
+- We now use `colorette` for all our terminal coloring needs.
+
+### Fixed
+
+- Failures to process a file in the `_data` directory will now throw legitmate errors via `quaff`. In the case of JSON this means you'll get actually useful line numbers.
+
 ## [0.20.0-alpha.0] - 2020-02-09
 
 ### Added

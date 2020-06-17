@@ -1,3 +1,4 @@
 {
-  "breed": "corgi"
+  "breed": "corgi",
+  "list": ["This", "should", "fail"]
 }
