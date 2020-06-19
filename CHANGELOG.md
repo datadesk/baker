@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `.json`, `.geojson` and `.topojson` files in the `assets` directory will now have hashes generated and work like you'd expect with `{% static %}`. In production these files will also be minified.
+
+### Changed
+
+- Baker no longer uses `hasha` to calculate file hashes and instead rolls its own with `crypto`, dropping two dependencies.
+
 ## [0.20.0] - 2020-06-17
 
 ### Added

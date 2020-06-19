@@ -55,7 +55,6 @@
     "dotenv-expand": "^5.1.0",
     "dynamic-import-polyfill": "^0.1.1",
     "fast-glob": "^3.2.4",
-    "hasha": "^5.0.0",
     "html-minifier": "^4.0.0",
     "imagemin": "^7.0.0",
     "imagemin-gifsicle": "^7.0.0",
