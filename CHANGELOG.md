@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.21.0] - 2020-06-22
+
 ### Added
 
 - `.json`, `.geojson` and `.topojson` files in the `assets` directory will now have hashes generated and work like you'd expect with `{% static %}`. In production these files will also be minified.
