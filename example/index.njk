@@ -1,7 +1,15 @@
+---aml
+{animals}
+cat: Abe
+{}
+---
+
 {% extends 'base.njk' %}
 
 {% block content %}
   Our favorite type of dog is always {{ meta.breed }} {{ "5000"|intcomma }}.
+
+  This cat is named {{ animals.cat }}.
 
   <p>This text should have a different font! {{ '2018-05-10'|date('yyyy-MM-dd HH:mm:ss') }}</p>
   <div class="bg-image"></div>
