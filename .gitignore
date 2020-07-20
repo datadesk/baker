@@ -88,3 +88,4 @@ typings/
 
 # example directories to ignore
 example/_dist
+example-simple/_dist
