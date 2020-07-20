@@ -1,10 +1,8 @@
-// ./bin/bake.js build --input example-simple
+const { Baker } = require('../../');
 
-const { Baker } = require('../');
-
-function generatePages(renderTemplate, data) {
+function createPages(createPage, data) {
   for (const title of data.titles) {
-    renderTemplate('template.html', `${title}.html`, {
+    createPage('template.html', `${title}.html`, {
       context: { title },
     });
   }
@@ -19,11 +17,7 @@ const baker = new Baker({
   pathPrefix: '/',
   entrypoints: 'scripts/app.js',
   staticRoot: '',
-  generatePages,
+  createPages,
 });
 
-async function main() {
-  await baker.serve();
-}
-
-main().catch(console.error);
+module.exports = { baker };

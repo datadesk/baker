@@ -12,10 +12,10 @@
   },
   "scripts": {
     "build": "./bin/bake.js build --input example --entrypoints \"scripts/{app,client}.{js,ts}\" --pathPrefix /projects/hello --domain https://www.latimes.com --staticRoot static",
-    "build:simple": "NODE_ENV=production node example-simple/runner.js",
+    "build:simple": "NODE_ENV=production node example-simple/config/build.js",
     "git-pre-commit": "precise-commits",
     "release": "np --no-yarn --no-tests",
-    "serve:simple": "NODE_ENV=development node example-simple/serve.js",
+    "serve:simple": "NODE_ENV=development node example-simple/config/serve.js",
     "start": "NODE_ENV=development ./bin/bake.js serve --input example --entrypoints \"scripts/{app,client}.{js,ts}\" --domain https://www.latimes.com --staticRoot static"
   },
   "repository": {
