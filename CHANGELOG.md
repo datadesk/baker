@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- It's now possible to dynamically generate HTML outputs by passing an optional `createPages` function when you create a `Baker` instance.
+
+```js
+/**
+ * "createPages" is a function to call for each page you want created
+ * "data" is the quaff generated contents of the "_data" folder
+ */
+function createPages(createPage, data) {
+  // use whatever parts of the data context (or external sources!) to determine
+  // what pages should be generated
+  for (const title of data.titles) {
+    // call createPage for each one, passing in the template to use within
+    // _layouts, where to output it in the output (_dist) folder, and optional
+    // additional context
+    createPage('template.html', `${title}.html`, {
+      context: { title },
+    });
+  }
+}
+
+const baker = new Baker({
+  ...,
+  createPages,
+});
+```
+
+This works whether you're running the development server locally or building for production.
+
+If an optional additional context is passed, it will be merged with the global context **only** for that render and have precedence, meaning any overlapping keys will contain what was passed locally to `createPage` even if it also exists in the global context. It's recommended to do something similar to above and "namespace" your provided local context to lessen the chance of an unexpected overwrite.
+
 ### Changed
 
 - Moved from `rollup-plugin-babel` to the namespaced `@rollup/plugin-babel`.
