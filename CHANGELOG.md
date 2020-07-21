@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.22.0] - 2020-07-20
+
 ### Added
 
 - It's now possible to dynamically generate HTML outputs by passing an optional `createPages` function when you create a `Baker` instance.
