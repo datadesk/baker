@@ -57,6 +57,7 @@ async function prepareConfig(inputOptions) {
   options.entrypoints = resolver('entrypoints');
   options.input = resolver('input');
   options.layouts = resolver('layouts');
+  options.nunjucksFilters = resolver('nunjucksFilters');
   options.output = resolver('output');
   options.pathPrefix = resolver('pathPrefix');
   options.staticRoot = resolver('staticRoot');
@@ -92,7 +93,8 @@ async function run(args) {
   const command = _[0];
   const config = await prepareConfig(flags);
 
-  logger('resolved input flags: ', config);
+  logger('command:', command);
+  logger('resolved input flags:', config);
 
   const baker = new Baker(config);
 

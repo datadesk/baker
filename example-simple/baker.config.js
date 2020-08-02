@@ -8,4 +8,11 @@ module.exports = {
       });
     }
   },
+  nunjucksFilters: {
+    square(n) {
+      n = +n;
+
+      return n * n;
+    },
+  },
 };
