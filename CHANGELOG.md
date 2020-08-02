@@ -7,6 +7,79 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- It's now possible to use a configuration file to pass options to Baker when it is ran using the CLI. This is the **preferred** method for using Baker.
+
+By default the CLI tool looks for a file called `baker.config.js` in the `input` directory when the `--config` (or `-c`) paramter is passed bare. You can also pass a path to a configuration file if you've given it another name or put it in another directory. If you _do not_ pass `--config` it will use the defaults instead and any other parameters you pass.
+
+```sh
+# will look for "baker.config.js" in the current directory
+baker bake --config
+
+# will load the config in "my-config.js" in the current directory
+baker bake --config my-config.js
+
+# will not use any config *at all* even if it exists, and use all default options other than "input"
+baker bake --input my-project-directory
+```
+
+The configuration file should export an `object` off of `module.exports`. All options are optional, and Baker will still use the smart defaults the previous iteration of the CLI used. Only set things you want to explicitly change/add!
+
+```js
+// baker.config.js
+module.exports = {
+  // a custom domain for all resolved URLs
+  domain: 'our-news-domain',
+
+  // we want to use the static root feature, so we supply the path
+  staticRoot: '/static/',
+
+  // use createPages to generate pages on the fly
+  createPages(createPage, data) {
+    for (const title of data.titles) {
+      createPage('template.html', `${title}.html`, {
+        context: { title },
+      });
+    }
+  },
+
+  // pass an object of filters to add to Nunjucks
+  nunjucksFilters: {
+    square(n) {
+      n = +n;
+
+      return n * n;
+    },
+  },
+};
+```
+
+- It's now possible to add new Nunjucks filters using the `nunjucksFilters` configuration method. While it was always technically possible to add new filters before by reaching into Baker's instance of Nunjucks, this is a more user-friendly option that is available via the new config file method.
+
+`nunjucksFilters` should be an object, where each key is the name of the filter, and the key's value is the function to call when the filter is used.
+
+```js
+// baker.config.js
+module.exports = {
+  nunjucksFilters: {
+    square(value) {
+      const n = +value;
+
+      return n * n;
+    },
+  },
+};
+```
+
+```html
+{% set value = 5 %}
+```
+
+```html
+{{ value|square }} // 25
+```
+
 ## [0.22.0] - 2020-07-20
 
 ### Added

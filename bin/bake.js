@@ -18,11 +18,13 @@ const defaultConfigFile = 'baker.config.js';
 
 const defaultConfig = {
   assets: 'assets',
+  createPages: undefined,
   data: '_data',
   domain: undefined,
   entrypoints: 'scripts/app.js',
   input: process.cwd(),
   layouts: '_layouts',
+  nunjucksFilters: undefined,
   output: '_dist',
   pathPrefix: '/',
   staticRoot: '',
