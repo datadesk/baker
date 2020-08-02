@@ -11,12 +11,12 @@
     "bake": "./bin/bake.js"
   },
   "scripts": {
-    "build": "./bin/bake.js build --input example --entrypoints \"scripts/{app,client}.{js,ts}\" --pathPrefix /projects/hello --domain https://www.latimes.com --staticRoot static",
-    "build:simple": "NODE_ENV=production node example-simple/config/build.js",
+    "build": "./bin/bake.js build --config example/baker.config.js",
+    "build:simple": "./bin/bake.js build --config example-simple/baker.config.js",
     "git-pre-commit": "precise-commits",
     "release": "np --no-yarn --no-tests",
-    "serve:simple": "NODE_ENV=development node example-simple/config/serve.js",
-    "start": "NODE_ENV=development ./bin/bake.js serve --input example --entrypoints \"scripts/{app,client}.{js,ts}\" --domain https://www.latimes.com --staticRoot static"
+    "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
+    "start": "NODE_ENV=development ./bin/bake.js serve --config example/baker.config.js"
   },
   "repository": {
     "type": "git",
@@ -53,6 +53,7 @@
     "colorette": "^1.2.0",
     "core-js": "^3.6.2",
     "date-fns": "^2.14.0",
+    "debug": "^4.1.1",
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
     "dynamic-import-polyfill": "^0.1.1",
@@ -81,6 +82,7 @@
   },
   "devDependencies": {
     "@datagraphics/prettier-config": "^2.0.0",
+    "@types/node": "^14.0.27",
     "@zeit/git-hooks": "^0.1.4",
     "classlist-polyfill": "^1.2.0",
     "intersection-observer": "^0.11.0",
