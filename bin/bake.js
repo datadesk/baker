@@ -51,6 +51,7 @@ async function prepareConfig(inputOptions) {
   const options = {};
 
   options.assets = resolver('assets');
+  options.createPages = resolver('createPages');
   options.data = resolver('data');
   options.domain = resolver('domain');
   options.entrypoints = resolver('entrypoints');
