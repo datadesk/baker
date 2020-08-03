@@ -14,7 +14,9 @@
   </head>
   <body>
     {% include 'header.njk' %}
+    {% block extra %}
     {% include 'extra.njk' %}
+    {% endblock extra %}
     {% block content %}{% endblock content %}
   </body>
 </html>

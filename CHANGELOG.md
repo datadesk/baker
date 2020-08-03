@@ -59,6 +59,8 @@ module.exports = {
 
 `nunjucksFilters` should be an object, where each key is the name of the filter, and the key's value is the function to call when the filter is used.
 
+- New `log` filter in Nunjucks templates that allows you to log any variable or value to the terminal's console.
+
 ```js
 // baker.config.js
 module.exports = {
