@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.23.0] - 2020-08-03
+
 ### Added
 
 - It's now possible to use a configuration file to pass options to Baker when it is ran using the CLI. This is the **preferred** method for using Baker.
