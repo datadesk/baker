@@ -82,6 +82,10 @@ module.exports = {
 {{ value|square }} // 25
 ```
 
+### Changed
+
+- Templates are now rendered sequentially instead of in parallel in an attempt to encourage some consistency in the order of errors being thrown. It's not uncommon to have an error present in multiple pages but because each one races each other to render it's not always the same page that throws. It's maddening. This _may_ be slightly slower in bigger projects but we shall see.
+
 ## [0.22.0] - 2020-07-20
 
 ### Added
