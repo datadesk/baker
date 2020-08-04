@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.24.0] - 2020-08-03
+
+## Changed
+
+- Custom Nunjucks filters now have a reference to the current instance of the Nunjucks engine available at `this`. Most filters will never need this, but we have a few cases where filters were hacking access in and we don't wanna break everything.
+
+## Fixed
+
+- The Nunjucks custom `log` filter now returns the input value so Nunjucks will not complain about a null or undefined output.
+
 ## [0.23.0] - 2020-08-03
 
 ### Added

@@ -21,5 +21,10 @@ module.exports = {
 
       return n * n;
     },
+    logContext() {
+      console.log(this.context);
+
+      return 'check console';
+    },
   },
 };
