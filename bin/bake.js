@@ -48,6 +48,7 @@ async function compileAndLoadConfig(pathToConfig) {
   } = await bundle.generate({
     exports: 'named',
     format: 'cjs',
+    interop: 'auto',
   });
 
   const loadedConfig = requireFromString(code, pathToConfig);
