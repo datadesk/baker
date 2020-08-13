@@ -1,6 +1,8 @@
-module.exports = {
+import { intcomma } from 'journalize';
+
+export default {
   // special case because it is in a directory
-  input: __dirname,
+  input: './example-simple',
 
   // we want to use the static root feature, so we supply the path
   staticRoot: '/static/',
@@ -16,6 +18,7 @@ module.exports = {
 
   // pass an object of filters to add to Nunjucks
   nunjucksFilters: {
+    otherintcomma: intcomma,
     square(n) {
       n = +n;
 

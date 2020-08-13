@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Changed
+
+- It's now possible to use ESM imports/exports when writing the `baker.config.js` file. Hopefully this will make context switching less annoying - before it was the only user-facing JavaScript file that required CommonJS syntax.
+
 ## [0.24.1] - 2020-08-11
 
 ## Fixed
