@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- The `jsonScript` filter is now built-in to Baker's Nunjucks' environment. [Much like the Django version](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#json-script), this filter safely outputs an object as JSON, wrapped in a <script> tag and ready for use with JavaScript. XSS attacks are mitigated by escaping the characters "<", ">" and "&".
+
+This input:
+
+```html
+{{ value|jsonScript("hello-data") }}
+```
+
+Becomes this:
+
+```html
+<script id="hello-data" type="application/json">
+  { "hello": "world" }
+</script>
+```
+
 ## Changed
 
 - It's now possible to use ESM imports/exports when writing the `baker.config.js` file. Hopefully this will make context switching less annoying - before it was the only user-facing JavaScript file that required CommonJS syntax.
