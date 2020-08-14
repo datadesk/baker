@@ -25,9 +25,15 @@ Becomes this:
 </script>
 ```
 
+- Attempting to use a JavaScript entrypoint that does not exist because compiling failed or because it was not configured as an entrypoint will now throw a more explicit (and helpful) error.
+
 ## Changed
 
 - It's now possible to use ESM imports/exports when writing the `baker.config.js` file. Hopefully this will make context switching less annoying - before it was the only user-facing JavaScript file that required CommonJS syntax.
+
+- The `static`, `staticabsolute` and `inject` blocks will now always throw an error if a valid file cannot be found. Previously it would silently (and intentionally) fail so a missing file wasn't the end of the world while in development. Maybe this will be too drastic of a change but we'll have to see. Too often folks have a silent failure in development and don't realize it until their build fails in production.
+
+- Nunjucks blocks and filters have been reorganized within Baker. Nothing user-facing should be altered by this.
 
 ## [0.24.1] - 2020-08-11
 
