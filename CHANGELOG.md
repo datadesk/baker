@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Moved to `premove` from `rimraf` for directory-emptying tasks.
+
 ## [0.25.0] - 2020-08-14
 
 ### Added
