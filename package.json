@@ -69,7 +69,7 @@
     "mini-sync": "^0.3.0",
     "mri": "^1.1.4",
     "nunjucks": "^3.2.2",
-    "postcss": "^7.0.32",
+    "postcss": "^8.0.3",
     "postcss-flexbugs-fixes": "^4.2.1",
     "premove": "^3.0.1",
     "quaff": "^4.1.0",
