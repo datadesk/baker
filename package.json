@@ -1,11 +1,12 @@
 {
   "name": "@datagraphics/baker",
-  "version": "0.24.0",
+  "version": "0.26.0",
   "description": "A build tool for projects by the Los Angeles Times Data and Graphics team.",
   "main": "lib/index.js",
   "files": [
     "bin",
-    "lib"
+    "lib",
+    "svelte.config.js"
   ],
   "bin": {
     "bake": "./bin/bake.js"
@@ -40,12 +41,12 @@
     "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-typescript": "^7.10.4",
-    "@rollup/plugin-babel": "^5.1.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-babel": "^5.2.0",
+    "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^8.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-replace": "^2.3.3",
-    "autoprefixer": "^9.8.2",
+    "autoprefixer": "^10.0.1",
     "babel-plugin-macros": "^2.6.1",
     "babel-plugin-transform-async-to-promises": "^0.8.14",
     "chokidar": "^3.4.1",
@@ -66,32 +67,32 @@
     "imagemin-svgo": "^8.0.0",
     "journalize": "^2.4.0",
     "lodash.debounce": "^4.0.8",
-    "mini-sync": "^0.2.0",
+    "magic-string": "^0.25.7",
+    "mini-sync": "^0.3.0",
     "mri": "^1.1.4",
     "nunjucks": "^3.2.2",
-    "postcss": "^7.0.32",
+    "postcss": "^8.1.1",
     "postcss-flexbugs-fixes": "^4.2.1",
+    "premove": "^3.0.1",
     "quaff": "^4.1.0",
     "require-from-string": "^2.0.2",
     "rev-path": "^2.0.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.22.1",
-    "rollup-plugin-svelte": "^5.2.3",
-    "rollup-plugin-terser": "^6.1.0",
+    "rollup": "^2.28.2",
+    "rollup-plugin-svelte": "^6.0.0",
+    "rollup-plugin-terser": "^7.0.0",
     "sass": "^1.26.8",
-    "svelte": "^3.23.2"
+    "svelte": "^3.29.0",
+    "svelte-preprocess": "^4.3.2",
+    "typescript": "^4.0.3"
   },
   "devDependencies": {
     "@datagraphics/prettier-config": "^2.0.0",
     "@types/node": "^14.0.27",
     "@zeit/git-hooks": "^0.1.4",
-    "classlist-polyfill": "^1.2.0",
-    "intersection-observer": "^0.11.0",
     "np": "^6.2.4",
-    "preact": "^10.4.4",
+    "preact": "^10.5.3",
     "precise-commits": "^1.0.2",
-    "prettier": "^2.0.5",
-    "whatwg-fetch": "^3.0.0"
+    "prettier": "^2.0.5"
   },
   "prettier": "@datagraphics/prettier-config"
 }

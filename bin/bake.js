@@ -7,6 +7,8 @@ const { resolve } = require('path');
 // packages
 const debug = require('debug');
 const mri = require('mri');
+const { rollup } = require('rollup');
+const requireFromString = require('require-from-string');
 
 // local
 const { Baker } = require('../lib');
@@ -30,6 +32,30 @@ const defaultConfig = {
   staticRoot: '',
 };
 
+function getDefaultFromConfig(module) {
+  return module.__esModule ? module.default : module;
+}
+
+async function compileAndLoadConfig(pathToConfig) {
+  const bundle = await rollup({
+    external: () => true,
+    input: pathToConfig,
+    treeshake: false,
+  });
+
+  const {
+    output: [{ code }],
+  } = await bundle.generate({
+    exports: 'named',
+    format: 'cjs',
+    interop: 'auto',
+  });
+
+  const loadedConfig = requireFromString(code, pathToConfig);
+
+  return getDefaultFromConfig(loadedConfig);
+}
+
 async function prepareConfig(inputOptions) {
   // the input directory everything is relative to
   const input = inputOptions.input;
@@ -42,9 +68,7 @@ async function prepareConfig(inputOptions) {
       inputOptions.config === true ? defaultConfigFile : inputOptions.config
     );
 
-    let config = await require(pathToConfig);
-
-    inputOptions = config;
+    inputOptions = await compileAndLoadConfig(pathToConfig);
   }
 
   // prep a helper function to resolve paths against input

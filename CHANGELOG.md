@@ -7,13 +7,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.26.0] - 2020-10-05
+
+### Added
+
+- Added TypeScript support to Svelte files via `svelte-preprocess`.
+- Added an exported `svelte.config.js` file so templates and other tools that need to mirror Baker's `svelte-preprocess` options can do so easily.
+
+### Changed
+
+- Moved to `premove` from `rimraf` for directory-emptying tasks.
+
+## [0.25.0] - 2020-08-14
+
+### Added
+
+- The `jsonScript` filter is now built-in to Baker's Nunjucks' environment. [Much like the Django version](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#json-script), this filter safely outputs an object as JSON, wrapped in a <script> tag and ready for use with JavaScript. XSS attacks are mitigated by escaping the characters "<", ">" and "&".
+
+This input:
+
+```html
+{{ value|jsonScript("hello-data") }}
+```
+
+Becomes this:
+
+```html
+<script id="hello-data" type="application/json">
+  { "hello": "world" }
+</script>
+```
+
+- Attempting to use a JavaScript entrypoint that does not exist because compiling failed or because it was not configured as an entrypoint will now throw a more explicit (and helpful) error.
+
+- It's now possible to use ESM imports/exports when writing the `baker.config.js` file. Hopefully this will make context switching less annoying - before it was the only user-facing JavaScript file that required CommonJS syntax.
+
+### Changed
+
+- The `static`, `staticabsolute` and `inject` blocks will now always throw an error if a valid file cannot be found. Previously it would silently (and intentionally) fail so a missing file wasn't the end of the world while in development. Maybe this will be too drastic of a change but we'll have to see. Too often folks have a silent failure in development and don't realize it until their build fails in production.
+
+- Nunjucks blocks and filters have been reorganized within Baker. Nothing user-facing should be altered by this.
+
+## [0.24.1] - 2020-08-11
+
+### Fixed
+
+- Bumped `mini-sync` to 0.3.0 to catch a downstream change to do what we already thought was happening - all files served by the dev server should be receiving explicit `no-cache` Cache Control headers.
+
 ## [0.24.0] - 2020-08-03
 
-## Changed
+### Changed
 
 - Custom Nunjucks filters now have a reference to the current instance of the Nunjucks engine available at `this`. Most filters will never need this, but we have a few cases where filters were hacking access in and we don't wanna break everything.
 
-## Fixed
+### Fixed
 
 - The Nunjucks custom `log` filter now returns the input value so Nunjucks will not complain about a null or undefined output.
 
