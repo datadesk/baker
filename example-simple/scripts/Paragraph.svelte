@@ -5,4 +5,4 @@
   export let value;
 </script>
 
-<p>{text} {square(value)}</p>
+<p>{text} = {square(value)}</p>

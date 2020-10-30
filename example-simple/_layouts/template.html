@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A templated page</title>
+    {% block styles %}{% endblock styles %}
+    {% script 'app' %}
   </head>
   <body>
-    <h1>{{ context.title }}</h1>
+    {% block content %}{% endblock content %}
   </body>
 </html>

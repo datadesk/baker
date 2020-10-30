@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'styles/main.scss' %}" />
-  </head>
-  <body>
-    {{ 4|square }}
-    {{ 4|log }}
-    {{ 5|logContext }}
-    
-    {% svelte 'scripts/Paragraph.svelte', text='the text', value=10 %}
-  </body>
-</html>
+{% extends 'template.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'styles/main.scss' %}" />
+{% endblock styles %}
+
+{% block content %}
+{{ 4|square }}
+{{ 4|log }}
+{{ 5|logContext }}
+
+{% svelte 'scripts/Paragraph.svelte', text='the text', value=10 %}
+{% endblock content %}
