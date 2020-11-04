@@ -71,7 +71,7 @@
     "mri": "^1.1.4",
     "nunjucks": "^3.2.2",
     "postcss": "^8.1.1",
-    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-flexbugs-fixes": "^5.0.0",
     "premove": "^3.0.1",
     "quaff": "^4.1.0",
     "require-from-string": "^2.0.2",
