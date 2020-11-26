@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - The file watcher logic is now much smarter and keeps track of dependencies directly in the engines (except for Rollup, which manages this itself). This is a small step toward having a much richer dependency graph for builds.
-- The `current_page` template context object has been renamed to `page`. It will continue to exist however until `1.0`.
+- The `current_page` template context object has been renamed to `page`. `current_page` however will continue to exist until `1.0`.
 
 ## [0.26.0] - 2020-10-05
 
