@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- CSS within Svelte components is now **supported**. This means any CSS that's written within Svelte components will be included in the `{% script %}` entrypoint bundle that is added to a page.
+
+### Changed
+
+- The file watcher logic is now much smarter and keeps track of dependencies directly in the engines (except for Rollup, which manages this itself). This is a small step toward having a much richer dependency graph for builds.
+
 ## [0.26.0] - 2020-10-05
 
 ### Added
