@@ -10,10 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - CSS within Svelte components is now **supported**. This means any CSS that's written within Svelte components will be included in the `{% script %}` entrypoint bundle that is added to a page.
+- Additional variables are now available on the `page` template context object (previously `current_page`) - in addition to `page.absoluteUrl`, `page.url` represents the project-relative URL. `page.inputPath` represents the project-relative path to the original input template, and `page.outputPath` represents the project-relative output path.
 
 ### Changed
 
 - The file watcher logic is now much smarter and keeps track of dependencies directly in the engines (except for Rollup, which manages this itself). This is a small step toward having a much richer dependency graph for builds.
+- The `current_page` template context object has been renamed to `page`. It will continue to exist however until `1.0`.
 
 ## [0.26.0] - 2020-10-05
 
