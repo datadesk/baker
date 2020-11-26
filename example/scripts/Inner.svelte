@@ -4,7 +4,7 @@
 
 <style>
   h1 {
-    color: tomato;
+    color: yellow;
   }
 </style>
 

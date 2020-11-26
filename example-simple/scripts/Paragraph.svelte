@@ -5,4 +5,10 @@
   export let value;
 </script>
 
+<style>
+  p {
+    color: pink;
+  }
+</style>
+
 <p>{text} = {square(value)}</p>
