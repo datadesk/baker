@@ -1,4 +1,5 @@
 {% extends 'base.njk' %}
+{% from "macro.njk" import demo %}
 
 {% block content %}
   Our favorite type of dog is always {{ meta.breed }} {{ "5000"|intcomma }}.
@@ -11,6 +12,8 @@
   {% staticabsolute 'styles/main.scss' %}
 
   {% static 'assets/demo.json' %}
+
+  {{ demo('woo') }}
 
   {% if NODE_ENV == 'production' %}
   We are in production!
