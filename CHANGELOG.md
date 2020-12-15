@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.27.1] - 2020-12-14
+
+### Added
+
+- Because users of `baker.config.js` no longer have access to the Baker instance, the function that resolves static files is now also available on the Nunjucks instance at `getStaticPath`.
+
 ## [0.27.0] - 2020-12-14
 
 ### Changed
