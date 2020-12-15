@@ -17,6 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The file watcher logic is now much smarter and keeps track of dependencies directly in the engines (except for Rollup, which manages this itself). This is a small step toward having a much richer dependency graph for builds.
 - The `current_page` template context object has been renamed to `page`. `current_page` however will continue to exist until `1.0`.
 
+## [0.27.1] - 2020-12-14
+
+### Added
+
+- Because users of `baker.config.js` no longer have access to the Baker instance, the function that resolves static files is now also available on the Nunjucks instance at `getStaticPath`.
+
 ## [0.27.0] - 2020-12-14
 
 ### Changed
