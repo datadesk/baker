@@ -7,6 +7,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- It's now possible to supply custom tags (`{% custom variable1, variable2 %}`) to Nunjucks via the `baker.config.js` file. It is very similar to how you add custom filters.
+
+How to add one:
+
+```js
+// baker.config.js
+module.exports = {
+  // ...
+  customTags: {
+    author(firstName, lastName) {
+      return `<p class="author">By ${firstName} ${lastName}</p>`;
+    },
+  },
+};
+```
+
+How to use one:
+
+```html
+{% author "Arthur", "Barker" %}
+```
+
+> Heads up! Nunjucks **requires** a comma between arguments.
+
+And the output:
+
+```html
+<p class="author">By Arthur Barker</p>
+```
+
 ## [0.27.1] - 2020-12-14
 
 ### Added

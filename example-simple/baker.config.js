@@ -30,4 +30,10 @@ export default {
       return 'check console';
     },
   },
+
+  nunjucksTags: {
+    doubler(n) {
+      return `<p>${n} doubled is ${n * 2}</p>`;
+    },
+  },
 };
