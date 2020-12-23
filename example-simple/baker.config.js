@@ -35,5 +35,16 @@ export default {
     doubler(n) {
       return `<p>${n} doubled is ${n * 2}</p>`;
     },
+    delay,
   },
 };
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function delay(ms = 2000) {
+  await sleep(ms);
+
+  return `I was delayed for ${ms}ms!`;
+}
+
+delay.async = true;
