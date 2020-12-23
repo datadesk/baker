@@ -39,6 +39,11 @@ And the output:
 <p class="author">By Arthur Barker</p>
 ```
 
+### Changed
+
+- Async nunjucks tags now _must_ return a Promise. This abstracts away some of Nunjucks' warts and the expectation of a callback to enable async tags.
+- Because the built-in `inject` tag was async it now returns a Promise to match the new interface.
+
 ## [0.27.1] - 2020-12-14
 
 ### Added
