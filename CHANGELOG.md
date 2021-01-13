@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.29.0] - 2021-01-13
+
 ### Added
 
 - CSS within Svelte components is now **supported**. This means any CSS that's written within Svelte components will be included in the `{% script %}` entrypoint bundle that is added to a page.
