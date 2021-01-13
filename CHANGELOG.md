@@ -17,6 +17,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The file watcher logic is now much smarter and keeps track of dependencies directly in the engines (except for Rollup, which manages this itself). This is a small step toward having a much richer dependency graph for builds.
 - The `current_page` template context object has been renamed to `page`. `current_page` however will continue to exist until `1.0`.
 
+## [0.28.0] - 2020-12-30
+
+### Added
+
+- It's now possible to supply custom tags (`{% custom variable1, variable2 %}`) to Nunjucks via the `baker.config.js` file. It is very similar to how you add custom filters.
+
+How to add one:
+
+```js
+// baker.config.js
+module.exports = {
+  // ...
+  nunjucksTags: {
+    author(firstName, lastName) {
+      return `<p class="author">By ${firstName} ${lastName}</p>`;
+    },
+  },
+};
+```
+
+How to use one:
+
+```html
+{% author "Arthur", "Barker" %}
+```
+
+> Heads up! Nunjucks **requires** a comma between arguments.
+
+And the output:
+
+```html
+<p class="author">By Arthur Barker</p>
+```
+
+### Changed
+
+- Async nunjucks tags now _must_ return a Promise. This abstracts away some of Nunjucks' warts and the expectation of a callback to enable async tags.
+- Because the built-in `inject` tag was async it now returns a Promise to match the new interface.
+
 ## [0.27.1] - 2020-12-14
 
 ### Added

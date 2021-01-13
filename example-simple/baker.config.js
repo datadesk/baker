@@ -30,4 +30,26 @@ export default {
       return 'check console';
     },
   },
+
+  nunjucksTags: {
+    doubler(n) {
+      return `<p>${n} doubled is ${n * 2}</p>`;
+    },
+    delay,
+    logger(x, y, z) {
+      console.log(x, y, z);
+    },
+  },
 };
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function delay(ms = 2000) {
+  console.log(`Delaying for ${ms}ms...`);
+  await sleep(ms);
+  console.log('Done delaying.');
+
+  return `I was delayed for ${ms}ms!`;
+}
+
+delay.async = true;
