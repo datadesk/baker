@@ -4,6 +4,8 @@ export default {
   // special case because it is in a directory
   input: './example-simple',
 
+  pathPrefix: '/an-example-path',
+
   // we want to use the static root feature, so we supply the path
   // staticRoot: '/static/',
 
