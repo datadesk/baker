@@ -11,9 +11,9 @@
   {% staticabsolute 'styles/main.scss' %}
 
   {% asset 'assets/demo.json' %}
+  {% asset 'assets/demo.json', absolute=true %}
 
   {% if NODE_ENV == 'production' %}
   We are in production!
   {% endif %}
-  {{ page|log }}
 {% endblock content %}
