@@ -6,8 +6,8 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: static-url('assets/fonts/benton-gothic-regular.woff2') format('woff2'),
-    static-url('assets/fonts/benton-gothic-regular.woff') format('woff');
+  src: asset-url('assets/fonts/benton-gothic-regular.woff2') format('woff2'),
+    asset-url('assets/fonts/benton-gothic-regular.woff') format('woff');
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 }
 
 .bg-image {
-  background-image: static-url('assets/images/corgi.jpg');
+  background-image: asset-url('assets/images/corgi.jpg');
   width: 400px;
   height: 400px;
 }

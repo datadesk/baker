@@ -5,7 +5,7 @@ export default {
   input: './example-simple',
 
   // we want to use the static root feature, so we supply the path
-  staticRoot: '/static/',
+  // staticRoot: '/static/',
 
   // use createPages to generate pages on the fly
   createPages(createPage, data) {
