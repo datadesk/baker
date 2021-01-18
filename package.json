@@ -9,15 +9,15 @@
     "svelte.config.js"
   ],
   "bin": {
-    "bake": "./bin/bake.js"
+    "bake": "./bin/bake.mjs"
   },
   "scripts": {
     "build": "./bin/bake.mjs build --config example/baker.config.js",
-    "build:simple": "./bin/bake.js build --config example-simple/baker.config.js",
+    "build:simple": "./bin/bake.mjs build --config example-simple/baker.config.js",
     "git-pre-commit": "precise-commits",
     "release": "np --no-yarn --no-tests",
-    "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
-    "start": "NODE_ENV=development ./bin/bake.js serve --config example/baker.config.js"
+    "serve:simple": "NODE_ENV=development ./bin/bake.mjs serve --config example-simple/baker.config.js",
+    "start": "NODE_ENV=development ./bin/bake.mjs serve --config example/baker.config.js"
   },
   "repository": {
     "type": "git",
