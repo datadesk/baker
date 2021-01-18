@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.30.0] - 2021-01-18
+
 ### Added
 
 A new experimental custom Rollup plugin has been added that provides an optimized method for importing data files in JavaScript. If a JSON, CSV, or TSV file is imported using the prefix `dataset:*` it will be added to the bundle either directly as an Object or Array literal (if under 10K in size) or rendered as a string within a `JSON.parse` call.
