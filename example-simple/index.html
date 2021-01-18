@@ -5,6 +5,8 @@
 {% endblock styles %}
 
 {% block content %}
+
+<img src="{% asset 'images/corgi.jpg' %}" alt="A picture of a corgi">
 {{ 4|square }}
 {{ 4|log }}
 {{ 5|logContext }}
@@ -12,5 +14,4 @@
 
 {% logger 1, 2, three=true %}
 
-{% delay 3000 %}
 {% endblock content %}

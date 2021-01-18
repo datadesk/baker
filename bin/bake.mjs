@@ -19,7 +19,6 @@ const logger = debug('baker:cli');
 const defaultConfigFile = 'baker.config.js';
 
 const defaultConfig = {
-  assets: 'assets',
   createPages: undefined,
   data: '_data',
   domain: undefined,
@@ -77,7 +76,6 @@ async function prepareConfig(inputOptions) {
 
   const options = {};
 
-  options.assets = resolver('assets');
   options.createPages = resolver('createPages');
   options.data = resolver('data');
   options.domain = resolver('domain');
@@ -95,7 +93,6 @@ async function prepareConfig(inputOptions) {
 
 const mriConfig = {
   alias: {
-    a: 'assets',
     c: 'config',
     d: 'data',
     e: 'entrypoints',

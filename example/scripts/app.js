@@ -15,6 +15,9 @@ async function main() {
     target: document.querySelector('#svelte'),
     props: { name: 'Svelte' },
   });
+
+  const data = await import('dataset:./cdcr.csv');
+  console.log(data);
 }
 
 main();

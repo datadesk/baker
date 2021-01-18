@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+A new experimental custom Rollup plugin has been added that provides an optimized method for importing data files in JavaScript. If a JSON, CSV, or TSV file is imported using the prefix `dataset:*` it will be added to the bundle either directly as an Object or Array literal (if under 10K in size) or rendered as a string within a `JSON.parse` call.
+
+It has been documented that [parsing a string within `JSON.parse` is much, much faster](https://v8.dev/blog/cost-of-javascript-2019#json) on average than directly passing in JavaScript, and typically this is the very first step when data is being loaded manually (with `d3-fetch`'s `json` or `csv` functions, etc.). This makes it possible to import (or even better — dynamically import) data without having to deploy it as a file or inject it into HTML to be parsed.
+
+An example of how to use it:
+
+```js
+import data from 'dataset:./assets/data.json';
+// or dynamically
+const data = await import('dataset:./assets/data.json');
+```
+
 ## [0.29.0] - 2021-01-13
 
 ### Added
