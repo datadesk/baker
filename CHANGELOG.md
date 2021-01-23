@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.31.0] - 2021-01-22
+
+### Added
+
+- Thanks to `@web/rollup-plugin-import-meta-assets` it's now possible to import paths to files within JavaScript and have that be enough to ensure that the file is added to the build. This is _yet another_ method for loading data in baker projects, and likely the best one yet.
+
+```js
+// Rollup will see this and understand it should add this file to your build
+const url = new URL('./data/cities.json', import.meta.url);
+
+// load it and go!
+const data = await d3.json(url);
+```
+
 ### Changed
 
 - The Nunjucks environment is now allowed to cache templates in production mode. Probably won't change much speed wise, but ever so slightly more efficient.
