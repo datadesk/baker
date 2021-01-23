@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The Nunjucks environment is now allowed to cache templates in production mode. Probably won't change much speed wise, but ever so slightly more efficient.
+
 ## [0.30.0] - 2021-01-18
 
 ### Added
