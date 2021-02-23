@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.31.2] - 2021-02-22
+
+### Added
+- Add `preventAssignment: true` to `@rollup/plugin-replace` options.
+
+### Fixed
+- Make sure `process.exit(1)` is called when builds fail.
 ## [0.31.1] - 2021-01-31
 
 ### Fixed
