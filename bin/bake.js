@@ -138,6 +138,7 @@ async function run(args) {
           red(bold("Build failed. Here's what possibly went wrong:\n"))
         );
         logErrorMessage(err);
+        process.exit(1);
       }
       break;
     case 'serve':
