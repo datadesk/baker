@@ -36,10 +36,10 @@
   "homepage": "https://github.com/datadesk/baker#readme",
   "dependencies": {
     "@babel/code-frame": "^7.10.3",
-    "@babel/core": "^7.13.8",
+    "@babel/core": "^7.13.10",
     "@babel/plugin-transform-react-jsx": "^7.12.12",
-    "@babel/plugin-transform-runtime": "^7.13.9",
-    "@babel/preset-env": "^7.13.9",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
     "@babel/preset-typescript": "^7.13.0",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^17.1.0",
