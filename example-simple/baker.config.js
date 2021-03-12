@@ -4,8 +4,12 @@ export default {
   // special case because it is in a directory
   input: './example-simple',
 
+  pathPrefix: 'projects',
+
   // we want to use the static root feature, so we supply the path
   staticRoot: '/static/',
+
+  entrypoints: 'scripts/{app,other}.js',
 
   // use createPages to generate pages on the fly
   createPages(createPage, data) {
