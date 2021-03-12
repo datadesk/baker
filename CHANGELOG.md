@@ -9,8 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Support for `legacy` JavaScript builds has been removed.
-- Added a new plugin dedicated to adding the `dynamic-import-polyfill` and got rid of the generic `prepend-entry` plugin.
-- `mini-sync`'s client script is now injected directly into the HTML instead of being injected into the bundle. This means it is technically possible to have a live reload experience without an JavaScript entrypoint.
+- Added a new plugin dedicated to adding the `dynamic-import-polyfill` and got rid of the generic `prepend-entry` plugin. Also vendored `dynamic-import-polyfill` to drop a dependency.
+- `mini-sync`'s client script is now injected directly into the HTML instead of being included in the JavaScript bundle. It is now possible to have a live reload experience without a JavaScript entrypoint.
+- The `{% static %}` tag will now pass through full URLs as-is when used as the parameter. This lets developers not have to worry about whether a path is project relative or not in loops, and allows templates that work with files to easily account for local and remote files.
 
 ## [0.31.2] - 2021-02-22
 
