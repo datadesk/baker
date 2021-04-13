@@ -41,7 +41,7 @@ export default {
     },
   },
 
-  minifyOptions: { collapseWhitespace: false }
+  minifyOptions: { collapseWhitespace: false },
 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
