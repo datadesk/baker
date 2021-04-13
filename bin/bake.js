@@ -28,6 +28,7 @@ const defaultConfig = {
   layouts: '_layouts',
   nunjucksFilters: undefined,
   nunjucksTags: undefined,
+  minifyOptions: undefined,
   output: '_dist',
   pathPrefix: '/',
   staticRoot: '',
@@ -86,6 +87,7 @@ async function prepareConfig(inputOptions) {
   options.layouts = resolver('layouts');
   options.nunjucksFilters = resolver('nunjucksFilters');
   options.nunjucksTags = resolver('nunjucksTags');
+  options.minifyOptions = resolver('minifyOptions');
   options.output = resolver('output');
   options.pathPrefix = resolver('pathPrefix');
   options.staticRoot = resolver('staticRoot');

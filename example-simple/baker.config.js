@@ -40,6 +40,8 @@ export default {
       console.log(x, y, z);
     },
   },
+
+  minifyOptions: { collapseWhitespace: false }
 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
