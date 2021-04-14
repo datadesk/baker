@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.32.0] - 2021-04-14
+
 ### Changed
 - The `{% static %}` tag will now pass through full URLs as-is when used as the parameter. This lets developers not have to worry about whether a path is project relative or not in loops, and allows templates that work with files to easily account for local and remote files.
 
