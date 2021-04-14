@@ -67,7 +67,7 @@
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^8.0.0",
+    "imagemin-svgo": "^9.0.0",
     "journalize": "^2.4.0",
     "lodash.debounce": "^4.0.8",
     "magic-string": "^0.25.7",
