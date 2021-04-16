@@ -55,5 +55,3 @@ async function delay(ms = 2000) {
 
   return `I was delayed for ${ms}ms!`;
 }
-
-delay.async = true;
