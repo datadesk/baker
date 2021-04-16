@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.32.0] - 2021-04-14
+
 ### Changed
 - Support for `legacy` JavaScript builds has been removed.
 - Added a new plugin dedicated to adding the `dynamic-import-polyfill` and got rid of the generic `prepend-entry` plugin. Also vendored `dynamic-import-polyfill` to drop a dependency.
