@@ -1,5 +1,6 @@
 {
   "name": "@datagraphics/baker",
+  "type": "module",
   "version": "0.32.0",
   "description": "A build tool for projects by the Los Angeles Times Data and Graphics team.",
   "main": "lib/index.js",
@@ -66,7 +67,7 @@
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^9.0.0",
-    "journalize": "^2.4.0",
+    "journalize": "^2.5.1",
     "lodash.debounce": "^4.0.8",
     "magic-string": "^0.25.7",
     "mini-sync": "^0.3.0",
