@@ -61,7 +61,7 @@
     "dotenv": "^8.2.0",
     "dotenv-expand": "^5.1.0",
     "fast-glob": "^3.2.4",
-    "html-minifier": "^4.0.0",
+    "html-minifier-terser": "^5.1.1",
     "imagemin": "^7.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",

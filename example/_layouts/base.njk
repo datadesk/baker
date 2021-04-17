@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>This is the title.</title>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      "publisher": {
+        "@type": "Organization",
+        "name": "A"
+      },
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "B"
+      }
+    }
+    </script>
+
     <style>{% inject 'styles/main.scss' %}</style>
     <link rel="stylesheet" href="{% static 'styles/main.scss' %}">
     {% script 'app' %}
