@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a new plugin dedicated to adding the `dynamic-import-polyfill` and got rid of the generic `prepend-entry` plugin. Also vendored `dynamic-import-polyfill` to drop a dependency.
 - `mini-sync`'s client script is now injected directly into the HTML instead of being included in the JavaScript bundle. It is now possible to have a live reload experience without a JavaScript entrypoint.
 - All custom Nunjucks' tags are now wrapped in a Promise, making it no longer necessary to denote whether a tag's function is async or not. You are safe to return sync or async values without any extra work.
+- All scripts have been converted to ES Modules. This means the minimum Node.js version for Baker going forward is `12.x`.
 
 ## [0.32.0] - 2021-04-14
 
