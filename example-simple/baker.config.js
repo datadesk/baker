@@ -20,28 +20,33 @@ export default {
     }
   },
 
-  // pass an object of filters to add to Nunjucks
-  nunjucksFilters: {
-    otherintcomma: intcomma,
-    square(n) {
-      n = +n;
+  nunjucks: {
+    filters: {
+      otherintcomma: intcomma,
+      square(n) {
+        n = +n;
 
-      return n * n;
-    },
-    logContext() {
-      console.log(this.context);
+        return n * n;
+      },
+      logContext() {
+        console.log(this.context);
 
-      return 'check console';
+        return 'check console';
+      },
     },
-  },
-
-  nunjucksTags: {
-    doubler(n) {
-      return `<p>${n} doubled is ${n * 2}</p>`;
+    tags: {
+      doubler(n) {
+        return `<p>${n} doubled is ${n * 2}</p>`;
+      },
+      delay,
+      logger(x, y, z) {
+        console.log(x, y, z);
+      },
     },
-    delay,
-    logger(x, y, z) {
-      console.log(x, y, z);
+    blockTags: {
+      upperBody(body) {
+        return body.toUpperCase();
+      },
     },
   },
 };

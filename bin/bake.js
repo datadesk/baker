@@ -26,8 +26,7 @@ const defaultConfig = {
   entrypoints: 'scripts/app.js',
   input: process.cwd(),
   layouts: '_layouts',
-  nunjucksFilters: undefined,
-  nunjucksTags: undefined,
+  nunjucks: Object.create(null),
   output: '_dist',
   pathPrefix: '/',
   staticRoot: '',
@@ -84,8 +83,7 @@ async function prepareConfig(inputOptions) {
   options.entrypoints = resolver('entrypoints');
   options.input = resolver('input');
   options.layouts = resolver('layouts');
-  options.nunjucksFilters = resolver('nunjucksFilters');
-  options.nunjucksTags = resolver('nunjucksTags');
+  options.nunjucks = resolver('nunjucks');
   options.output = resolver('output');
   options.pathPrefix = resolver('pathPrefix');
   options.staticRoot = resolver('staticRoot');
