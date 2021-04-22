@@ -11,7 +11,6 @@ import { rollup } from 'rollup';
 import requireFromString from 'require-from-string';
 
 // local
-import { Baker } from '../lib/index.js';
 import { logErrorMessage } from '../lib/utils.js';
 
 const logger = debug('baker:cli');
@@ -19,7 +18,6 @@ const logger = debug('baker:cli');
 const defaultConfigFile = 'baker.config.js';
 
 const defaultConfig = {
-  assets: 'assets',
   createPages: undefined,
   data: '_data',
   domain: undefined,
@@ -76,7 +74,6 @@ async function prepareConfig(inputOptions) {
 
   const options = {};
 
-  options.assets = resolver('assets');
   options.createPages = resolver('createPages');
   options.data = resolver('data');
   options.domain = resolver('domain');
@@ -93,7 +90,6 @@ async function prepareConfig(inputOptions) {
 
 const mriConfig = {
   alias: {
-    a: 'assets',
     c: 'config',
     d: 'data',
     e: 'entrypoints',
@@ -122,13 +118,12 @@ async function run(args) {
   logger('command:', command);
   logger('resolved input flags:', config);
 
-  const baker = new Baker(config);
-
   switch (command) {
     case 'bake':
     case 'build':
       try {
-        await baker.bake();
+        const { build } = await import('../lib/build.js');
+        await build(config);
 
         console.log(green(bold('The build was a success!')));
       } catch (err) {
@@ -140,7 +135,8 @@ async function run(args) {
       }
       break;
     case 'serve':
-      await baker.serve();
+      const { serve } = await import('../lib/serve.js');
+      await serve(config);
   }
 }
 

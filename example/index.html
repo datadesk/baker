@@ -8,9 +8,14 @@
   <div id="svelte"></div>
   <div id="preact"></div>
 
-  {% staticabsolute 'styles/main.scss' %}
-
   {% static 'assets/demo.json' %}
+  {% asset 'assets/demo.json' %}
+
+  {% staticabsolute 'assets/demo.json' %}
+  {% asset 'assets/demo.json', absolute=true %}
+
+  {% static 'styles/main.scss' %}
+  {% style 'styles/main.scss' %}
 
   <img src="{% static 'https://via.placeholder.com/150' %}">
 
