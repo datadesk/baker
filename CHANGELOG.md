@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.32.1] - 2021-04-27
+
+### Fixed
+
+- Our custom Rollup `datasetPlugin` and `dataPlugin` have been moved to before `@rollup/plugin-node-resolve` in the Rollup plugin list. In some cases `nodeResolve` would misinterpret the `*:` prefix and blow up the path before these plugins got a chance to do it first.
+
 ## [0.32.0] - 2021-04-14
 
 ### Changed
