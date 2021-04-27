@@ -4,15 +4,14 @@ import { extname } from 'path';
 // packages
 import autoprefixer from 'autoprefixer';
 import * as journalize from 'journalize';
+import { create } from 'mini-sync';
 import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
 import { premove } from 'premove';
-import nunjucks from 'nunjucks';
 
 // local
 import { prepareConfig } from './config.js';
 import { NunjucksEngine } from './engines/nunjucks.js';
 import { RollupEngine } from './engines/rollup.js';
-import { getData } from './utils.js';
 
 // filters
 import { dateFilter } from './filters/date.js';
@@ -28,9 +27,9 @@ import { createStyleTag } from './tags/style.js';
 import { staticUrlPlugin } from './postcss-plugins/static-url.js';
 
 /**
- * @param {import("./types").BakerOptions} userConfig
+ * @param {import("./types").BakerOptions} config
  */
-export async function build(userConfig) {
+export async function serve(userConfig) {
   const {
     data,
     domain,
@@ -42,7 +41,7 @@ export async function build(userConfig) {
     output,
     pathPrefix,
     staticRoot,
-  } = prepareConfig(userConfig, 'build', 'production');
+  } = prepareConfig(userConfig, 'serve', 'development');
 
   // the default input and output arguments passed to each engine
   const defaults = {
@@ -57,7 +56,14 @@ export async function build(userConfig) {
 
   const nunjucksEngine = new NunjucksEngine({
     layouts,
+    createPages,
     ...defaults,
+  });
+
+  // prep the server instance
+  const server = create({
+    dir: [output, input],
+    port: 3000,
   });
 
   // add all the features of journalize to nunjucks as filters
@@ -72,14 +78,17 @@ export async function build(userConfig) {
 
   // prepare custom tags
   const asset = createAssetTag(defaults);
-  const style = createStyleTag({
-    postcssPlugins: [
-      staticUrlPlugin({ loader: asset }),
-      postcssFlexbugsFixes,
-      autoprefixer({ flexbox: 'no-2009' }),
-    ],
-    ...defaults,
-  });
+  const style = createStyleTag(
+    {
+      postcssPlugins: [
+        staticUrlPlugin({ loader: asset }),
+        postcssFlexbugsFixes,
+        autoprefixer({ flexbox: 'no-2009' }),
+      ],
+      ...defaults,
+    },
+    { server }
+  );
   const script = createScriptTag(pathPrefix, rollupEngine);
 
   nunjucksEngine.addCustomTags({
@@ -123,17 +132,4 @@ export async function build(userConfig) {
 
   // remove the output directory to make sure it's clean
   await premove(output);
-
-  // prep the data
-  const context = await getData(data);
-
-  // pass the data context to rollup and nunjucks
-  rollupEngine.context = context;
-  nunjucksEngine.context = context;
-
-  // compile the scripts
-  await rollupEngine.build();
-
-  // build the HTML
-  await nunjucksEngine.build();
 }

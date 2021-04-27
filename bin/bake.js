@@ -135,8 +135,8 @@ async function run(args) {
       }
       break;
     case 'serve':
-      const { serve } = await import('../lib/serve.js');
-      await serve(config);
+      const { createServer } = await import('../lib/serve.js');
+      await createServer(config);
   }
 }
 
