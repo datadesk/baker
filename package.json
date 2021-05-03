@@ -1,7 +1,7 @@
 {
   "name": "@datagraphics/baker",
   "type": "module",
-  "version": "0.32.0",
+  "version": "0.32.1",
   "description": "A build tool for projects by the Los Angeles Times Data and Graphics team.",
   "main": "lib/index.js",
   "files": [

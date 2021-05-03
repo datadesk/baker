@@ -17,8 +17,8 @@ async function main() {
     props: { name: 'Svelte' },
   });
 
-  const data = await import('dataset:./cdcr.csv');
-  console.log(data);
+  const { getData } = await import('./nested/internal.js');
+  console.log(await getData());
 
   const dataUrl = new URL('./cdcr.csv', import.meta.url);
   console.log(dataUrl);
