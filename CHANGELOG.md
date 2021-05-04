@@ -36,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ```
 
 - Relative files referenced in SCSS/CSS with `url()` are now passed through `static` without requiring Sass to be aware. The `static-url` and `static-path` Sass functions have been removed.
+
 ## [0.32.1] - 2021-04-27
 
 ### Fixed

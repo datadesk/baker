@@ -1,3 +1,5 @@
+export type BakerMode = 'production' | 'development';
+
 export type NunjucksFilter = (...args) => unknown;
 export type NunjucksTag = NunjucksFilter;
 export type NunjucksBlockTag = (body: string, ...args) => unknown;
