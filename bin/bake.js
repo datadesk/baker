@@ -25,6 +25,7 @@ const defaultConfig = {
   input: process.cwd(),
   layouts: '_layouts',
   nunjucks: Object.create(null),
+  svelteCompilerOptions: undefined,
   output: '_dist',
   pathPrefix: '/',
   staticRoot: '',
@@ -84,6 +85,7 @@ async function prepareConfig(inputOptions) {
   options.output = resolver('output');
   options.pathPrefix = resolver('pathPrefix');
   options.staticRoot = resolver('staticRoot');
+  options.svelteCompilerOptions = resolver('svelteCompilerOptions');
 
   return options;
 }

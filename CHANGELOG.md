@@ -37,6 +37,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Relative files referenced in SCSS/CSS with `url()` are now passed through `static` without requiring Sass to be aware. The `static-url` and `static-path` Sass functions have been removed.
 
+## [0.33.0] - 2021-05-05
+
+### Added
+
+- It is now possible to pass compiler options to Svelte via `svelteCompilerOptions` in `baker.config.js`. Good for the rare case of when you need to render them as hydratable.
+
 ## [0.32.1] - 2021-04-27
 
 ### Fixed
