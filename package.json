@@ -13,12 +13,12 @@
     "bake": "./bin/bake.js"
   },
   "scripts": {
-    "build": "./bin/bake.js build --config example/baker.config.js",
-    "build:simple": "./bin/bake.js build --config example-simple/baker.config.js",
+    "build": "./bin/bake.js build --config examples/full/baker.config.js",
+    "build:simple": "./bin/bake.js build --config examples/simple/baker.config.js",
     "git-pre-commit": "precise-commits",
     "release": "np --no-yarn --no-tests",
-    "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
-    "start": "NODE_ENV=development ./bin/bake.js serve --config example/baker.config.js"
+    "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config examples/simple/baker.config.js",
+    "start": "NODE_ENV=development ./bin/bake.js serve --config examples/full/baker.config.js"
   },
   "repository": {
     "type": "git",
