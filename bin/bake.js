@@ -28,6 +28,7 @@ const defaultConfig = {
   layouts: '_layouts',
   nunjucksFilters: undefined,
   nunjucksTags: undefined,
+  svelteCompilerOptions: undefined,
   output: '_dist',
   pathPrefix: '/',
   staticRoot: '',
@@ -89,6 +90,7 @@ async function prepareConfig(inputOptions) {
   options.output = resolver('output');
   options.pathPrefix = resolver('pathPrefix');
   options.staticRoot = resolver('staticRoot');
+  options.svelteCompilerOptions = resolver('svelteCompilerOptions');
 
   return options;
 }
