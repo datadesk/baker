@@ -1,6 +1,6 @@
 {
   "name": "@datagraphics/baker",
-  "version": "0.32.1",
+  "version": "0.33.0",
   "description": "A build tool for projects by the Los Angeles Times Data and Graphics team.",
   "main": "lib/index.js",
   "files": [
@@ -91,7 +91,7 @@
   },
   "devDependencies": {
     "@datagraphics/prettier-config": "^2.0.0",
-    "@types/node": "^14.14.19",
+    "@types/node": "^15.0.2",
     "@zeit/git-hooks": "^0.1.4",
     "np": "^7.5.0",
     "preact": "^10.5.13",
