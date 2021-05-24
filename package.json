@@ -58,7 +58,7 @@
     "d3-dsv": "^2.0.0",
     "date-fns": "^2.21.2",
     "debug": "^4.3.1",
-    "dotenv": "^9.0.0",
+    "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "dynamic-import-polyfill": "^0.1.1",
     "fast-glob": "^3.2.4",
