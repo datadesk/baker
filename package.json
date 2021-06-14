@@ -78,7 +78,7 @@
     "postcss": "^8.2.14",
     "postcss-flexbugs-fixes": "^5.0.2",
     "premove": "^3.0.1",
-    "quaff": "^4.1.0",
+    "quaff": "^5.0.0",
     "require-from-string": "^2.0.2",
     "rev-path": "^2.0.0",
     "rollup": "^2.47.0",
