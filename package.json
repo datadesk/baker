@@ -35,7 +35,6 @@
   },
   "homepage": "https://github.com/datadesk/baker#readme",
   "dependencies": {
-    "@babel/code-frame": "^7.10.3",
     "@babel/core": "^7.14.0",
     "@babel/plugin-transform-react-jsx": "^7.12.12",
     "@babel/plugin-transform-runtime": "^7.13.10",
@@ -85,6 +84,7 @@
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
     "sass": "^1.32.12",
+    "simple-code-frame": "^1.1.1",
     "svelte": "^3.38.2",
     "svelte-preprocess": "^4.7.3",
     "typescript": "^4.2.2"
