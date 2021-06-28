@@ -92,7 +92,7 @@
   "devDependencies": {
     "@datagraphics/cookbook": "^0.1.0",
     "@datagraphics/prettier-config": "^2.0.0",
-    "@types/node": "^14.14.19",
+    "@types/node": "^15.12.5",
     "@zeit/git-hooks": "^0.1.4",
     "np": "^7.5.0",
     "preact": "^10.5.13",
