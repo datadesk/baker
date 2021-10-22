@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.34.0] - 2021-06-23
+
+### Changed
+
+- The Nunjucks engine now uses `FileSystemLoader` for `node_modules` imports (very similar to how Sass engine works via `includePaths`), instead of deferring to `NodeResolveLoader`. That loader is not nearly as useful when `npm` installed packages use the new [`"export": { ... }` format](https://nodejs.org/api/packages.html#packages_exports). Unless packages explicitly declare the non-JS exports you're unable to find them. I don't think we were using that anyway, so it's NBD.
+
+## [0.33.0] - 2021-05-05
+
+### Added
+
+- It is now possible to pass compiler options to Svelte via `svelteCompilerOptions` in `baker.config.js`. Good for the rare case of when you need to render them as hydratable.
+
+## [0.32.1] - 2021-04-27
+
+### Fixed
+
+- Our custom Rollup `datasetPlugin` and `dataPlugin` have been moved to before `@rollup/plugin-node-resolve` in the Rollup plugin list. In some cases `nodeResolve` would misinterpret the `*:` prefix and blow up the path before these plugins got a chance to do it first.
+
+## [0.32.0] - 2021-04-14
+
 ### Changed
 - The `{% static %}` tag will now pass through full URLs as-is when used as the parameter. This lets developers not have to worry about whether a path is project relative or not in loops, and allows templates that work with files to easily account for local and remote files.
 

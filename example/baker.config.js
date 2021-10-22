@@ -4,4 +4,7 @@ export default {
   pathPrefix: '/',
   domain: 'https://www.latimes.com',
   staticRoot: 'static',
+  svelteCompilerOptions: {
+    hydratable: true,
+  },
 };
