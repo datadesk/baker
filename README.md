@@ -6,11 +6,9 @@
   <a href="https://packagephobia.now.sh/result?p=@datagraphics/baker"><img src="https://badgen.net/packagephobia/install/@datagraphics/baker" alt="install size"></a>
 </p>
 
-`@datagraphics/baker` is a build tool for projects by the Los Angeles Times Data and Graphics team.
+`@datagraphics/baker` is a build tool by and for the Los Angeles Times. The Times uses it to publish static pages at latimes.com/projects. You can use it however you'd like.
 
 ## Installation
-
-`@datagraphics/baker` is available via `npm`.
 
 ```sh
 npm install -D @datagraphics/baker
