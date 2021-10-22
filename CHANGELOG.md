@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.34.0] - 2021-06-23
 
+- Added new `minifyOptions` option to allow users to override the default configuration
+- Updated dependencies
+
 ### Changed
 
 - The Nunjucks engine now uses `FileSystemLoader` for `node_modules` imports (very similar to how Sass engine works via `includePaths`), instead of deferring to `NodeResolveLoader`. That loader is not nearly as useful when `npm` installed packages use the new [`"export": { ... }` format](https://nodejs.org/api/packages.html#packages_exports). Unless packages explicitly declare the non-JS exports you're unable to find them. I don't think we were using that anyway, so it's NBD.
