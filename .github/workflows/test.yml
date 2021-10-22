@@ -1,4 +1,4 @@
-name: Ensure Baker can build example projects
+name: Test builds
 
 on: [push]
 
