@@ -1,0 +1,36 @@
+name: Test builds
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Use npm v7
+        run: npm install --global npm@7
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: npm install
+        run: npm ci
+
+      - name: npm run build
+        run: npm run build
+
+      - name: npm run build:simple
+        run: npm run build:simple
