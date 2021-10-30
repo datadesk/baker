@@ -1,10 +1,6 @@
-<h1 align="center">
-  @datagraphics/baker
-</h1>
-<p align="center">
-  <a href="https://www.npmjs.org/package/@datagraphics/baker"><img src="https://badgen.net/npm/v/@datagraphics/baker" alt="npm"></a>
-  <a href="https://packagephobia.now.sh/result?p=@datagraphics/baker"><img src="https://badgen.net/packagephobia/install/@datagraphics/baker" alt="install size"></a>
-</p>
+# @datagraphics/baker
+
+[![npm](https://badgen.net/npm/v/@datagraphics/baker)](https://www.npmjs.org/package/@datagraphics/baker) [![install size](https://badgen.net/packagephobia/install/@datagraphics/baker)](https://packagephobia.now.sh/result?p=@datagraphics/baker)
 
 <img src="./.github/baker.jpg" alt="Baker" width=250>
 
