@@ -54,4 +54,10 @@ Release the new version of the package.
 npm publish
 ```
 
+Push your work to GitHub.
+
+```sh
+git push origin main
+```
+
 Create a new release on GitHub at [github.com/datadesk/baker/releases](https://github.com/datadesk/baker/releases) with the same version number. Paste the changelog entry into the post as a bullet list.
