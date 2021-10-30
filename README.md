@@ -18,7 +18,13 @@ npm install -D @datagraphics/baker
 npm install
 ```
 
-[Branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) off. Make any changes. Run our tests.
+[Branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) off. Make any changes. Preview them with the test server.
+
+```sh
+npm start
+```
+
+Run our tests.
 
 ```sh
 npm run build
