@@ -1,6 +1,6 @@
 <img src="./.github/baker.jpg" alt="Baker" width=250>
 
-`@datagraphics/baker` is a build tool by and for the Los Angeles Times. The Times uses it to build static pages to publish at latimes.com/projects. You can use it however you'd like.
+`@datagraphics/baker` is a build tool by and for the Los Angeles Times. The Times uses it to build the static pages published at latimes.com/projects. You can use it however you'd like.
 
 [![npm](https://badgen.net/npm/v/@datagraphics/baker)](https://www.npmjs.org/package/@datagraphics/baker) [![install size](https://badgen.net/packagephobia/install/@datagraphics/baker)](https://packagephobia.now.sh/result?p=@datagraphics/baker)
 
