@@ -12,7 +12,7 @@ npm install -D @datagraphics/baker
 
 ## What is Baker and why do you use it?
 
-Baker a development environment that can be converted into a static website that’s ready for the web. With a minimal amount of HTML, CSS and JavaScript, you can publish a project on latimes.com/projects. The Los Angeles Times uses Baker to write custom code for projects that aren’t possible within the rigid templates of our content management system.
+Baker is a development environment that can be converted into a static website that’s ready for the web. With a minimal amount of HTML, CSS and JavaScript, you can publish a project on latimes.com/projects. The Los Angeles Times uses Baker to write custom code for projects that aren’t possible within the rigid templates of our content management system.
 
 ## How does Baker work?
 
