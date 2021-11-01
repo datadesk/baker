@@ -24,6 +24,8 @@ CSS styles are written using the preprocessor [Sass](https://sass-lang.com/). Sa
 
 JavaScript is bundled using [Rollup](https://www.rollupjs.org/guide/en/), which makes it possible for us to write modern JavaScript that gets optimized and prepared in a way that makes it load as fast as possible for our users. Code we write is passed through a JavaScript compiler called [Babel](https://babeljs.io/), which rewrites our code to make sure it works in all the browsers we support.
 
+Data imports, powered by [quaff](https://www.npmjs.com/package/quaff), allow for easily imported structured data files into templates, which is useful for making data visualizations.
+
 ## How do I get started using it?
 
 A page template at [github.com/datadesk/baker-example-page-template](https://github.com/datadesk/baker-example-page-template) is our premade starter that comes with a bunch of HTML, styles and scripts ready for you to start a project with. It also includes GitHub Actions that can deploy staging and production version of your page. It works after only minimal configuration.
