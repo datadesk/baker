@@ -28,7 +28,7 @@ Data imports, powered by [quaff](https://www.npmjs.com/package/quaff), allow for
 
 ## How do I get started using it?
 
-A page template at [github.com/datadesk/baker-example-page-template](https://github.com/datadesk/baker-example-page-template) is our premade starter that comes with HTML, styles and scripts ready for you to start a project with. It also includes GitHub Actions that can deploy staging and production version of your page. It works after only minimal configuration. You could customize it to match the look and feel of your site.
+The repository at [github.com/datadesk/baker-example-page-template](https://github.com/datadesk/baker-example-page-template) is our premade starter that comes with HTML, styles and scripts ready for experimentation. It also includes GitHub Actions that can deploy staging and production version of your page. It works after only minimal configuration. You could customize it to match the look and feel of your site.
 
 ## Contributing
 
