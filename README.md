@@ -2,6 +2,8 @@
 
 `@datagraphics/baker` is a build tool by and for the Los Angeles Times. The Times uses it to build the static pages published at latimes.com/projects. You can use it however you'd like.
 
+An example of how The Times puts the package to use is available at [datadesk/baker-example-page-template](https://github.com/datadesk/baker-example-page-template).
+
 [![npm](https://badgen.net/npm/v/@datagraphics/baker)](https://www.npmjs.org/package/@datagraphics/baker) [![install size](https://badgen.net/packagephobia/install/@datagraphics/baker)](https://packagephobia.now.sh/result?p=@datagraphics/baker)
 
 ## Installation
