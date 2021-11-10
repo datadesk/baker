@@ -8,7 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.37.0] - 2021-11-10
 
 ### Added
-
 - New `NOW` global variable with the current timestamp returned by `new Date()`
 
 ### Changed
