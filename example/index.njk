@@ -18,6 +18,8 @@
   We are in production!
   {% endif %}
   {{ page|log }}
+  
+  <div id="now">NOW: {{ NOW|date('yyyy-M-dd') }}</div>
 
   {% include '@datagraphics/cookbook/footer/template.html' %}
 {% endblock content %}
