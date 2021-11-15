@@ -6,6 +6,11 @@ An example of how The Times puts the package to use is available at [datadesk/ba
 
 [![npm](https://badgen.net/npm/v/@datagraphics/baker)](https://www.npmjs.org/package/@datagraphics/baker) [![install size](https://badgen.net/packagephobia/install/@datagraphics/baker)](https://packagephobia.now.sh/result?p=@datagraphics/baker)
 
+## Requirements
+
+* [Node.js](https://nodejs.org/en/) versions 12, 14 and 16, though at minimum 12.20, 14.14, or 16.0.
+* [Node Package Manager](https://www.w3schools.com/whatis/whatis_npm.asp)
+
 ## Installation
 
 ```sh
