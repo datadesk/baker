@@ -20,6 +20,7 @@
   {{ page|log }}
   
   <div id="now">NOW: {{ NOW|date('yyyy-M-dd') }}</div>
+  <div id="global-var">FOO: {{ FOO }}</div>
 
   {% include '@datagraphics/cookbook/footer/template.html' %}
 {% endblock content %}

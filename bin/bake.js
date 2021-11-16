@@ -26,6 +26,7 @@ const defaultConfig = {
   entrypoints: 'scripts/app.js',
   input: process.cwd(),
   layouts: '_layouts',
+  nunjucksVariables: undefined,
   nunjucksFilters: undefined,
   nunjucksTags: undefined,
   minifyOptions: undefined,
@@ -86,6 +87,7 @@ async function prepareConfig(inputOptions) {
   options.entrypoints = resolver('entrypoints');
   options.input = resolver('input');
   options.layouts = resolver('layouts');
+  options.nunjucksVariables = resolver('nunjucksVariables');
   options.nunjucksFilters = resolver('nunjucksFilters');
   options.nunjucksTags = resolver('nunjucksTags');
   options.minifyOptions = resolver('minifyOptions');
