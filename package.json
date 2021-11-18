@@ -2,19 +2,20 @@
   "name": "@datagraphics/baker",
   "version": "0.38.0",
   "description": "A build tool for projects by the Los Angeles Times Data and Graphics team.",
-  "main": "lib/index.js",
+  "exmports": "./lib/index.js",
+  "type": "module",
   "files": [
     "bin",
     "lib",
     "svelte.config.js"
   ],
+  "engines": { "node" : "^12.20.0 || ^14.13.1 || >=16.0.0" },
   "bin": {
     "bake": "./bin/bake.js"
   },
   "scripts": {
     "build": "./bin/bake.js build --config example/baker.config.js",
     "build:simple": "./bin/bake.js build --config example-simple/baker.config.js",
-    "git-pre-commit": "precise-commits",
     "release": "np --no-yarn --no-tests",
     "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
     "start": "NODE_ENV=development ./bin/bake.js serve --config example/baker.config.js"
