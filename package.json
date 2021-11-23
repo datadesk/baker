@@ -19,6 +19,7 @@
     "build": "./bin/bake.js build --config example/baker.config.js",
     "build:simple": "./bin/bake.js build --config example-simple/baker.config.js",
     "release": "np --no-yarn --no-tests",
+    "git-pre-commit": "precise-commits",
     "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
     "start": "NODE_ENV=development ./bin/bake.js serve --config example/baker.config.js"
   },
@@ -96,6 +97,8 @@
     "@datagraphics/cookbook": "^1.8.0",
     "@datagraphics/prettier-config": "^2.0.0",
     "@types/node": "^14.14.19",
+    "@vercel/git-hooks": "^1.0.0",
+    "precise-commits": "^1.0.2",
     "np": "^7.5.0",
     "preact": "^10.6.0",
     "prettier": "^2.2.0"
