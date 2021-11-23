@@ -1,4 +1,4 @@
 // packages
-import typescript from 'svelte-preprocess';
+import sveltePreprocess from 'svelte-preprocess';
 
-export const preprocess = [typescript()];
+export const preprocess = [sveltePreprocess.typescript()];
