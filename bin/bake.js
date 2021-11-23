@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
 // native
-const { bold, green, red } = require('colorette');
-const { resolve } = require('path');
+import { bold, green, red } from 'colorette';
+import { resolve } from 'path';
 
 // packages
-const debug = require('debug');
-const mri = require('mri');
-const { rollup } = require('rollup');
-const requireFromString = require('require-from-string');
+import debug from 'debug';
+import mri from 'mri';
+import { rollup } from 'rollup';
+import requireFromString from 'require-from-string';
 
 // local
-const { Baker } = require('../lib');
-const { logErrorMessage } = require('../lib/utils');
+import { Baker } from '../lib/index.js';
+import { logErrorMessage } from '../lib/utils.js';
 
 const logger = debug('baker:cli');
 
@@ -54,7 +54,6 @@ async function compileAndLoadConfig(pathToConfig) {
     format: 'cjs',
     interop: 'auto',
   });
-
   const loadedConfig = requireFromString(code, pathToConfig);
 
   return getDefaultFromConfig(loadedConfig);

@@ -1,21 +1,25 @@
 {
   "name": "@datagraphics/baker",
+  "type": "module",
   "version": "0.38.0",
   "description": "A build tool for projects by the Los Angeles Times Data and Graphics team.",
-  "main": "lib/index.js",
+  "exports": "./lib/index.js",
   "files": [
     "bin",
     "lib",
     "svelte.config.js"
   ],
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
   "bin": {
     "bake": "./bin/bake.js"
   },
   "scripts": {
     "build": "./bin/bake.js build --config example/baker.config.js",
     "build:simple": "./bin/bake.js build --config example-simple/baker.config.js",
-    "git-pre-commit": "precise-commits",
     "release": "np --no-yarn --no-tests",
+    "git-pre-commit": "precise-commits",
     "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
     "start": "NODE_ENV=development ./bin/bake.js serve --config example/baker.config.js"
   },
@@ -37,7 +41,7 @@
   "dependencies": {
     "@babel/core": "^7.14.0",
     "@babel/plugin-transform-react-jsx": "^7.12.12",
-    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-env": "^7.14.1",
     "@babel/preset-typescript": "^7.13.0",
     "@rollup/plugin-babel": "^5.2.3",
@@ -61,12 +65,12 @@
     "dotenv-expand": "^5.1.0",
     "dynamic-import-polyfill": "^0.1.1",
     "fast-glob": "^3.2.4",
-    "html-minifier": "^4.0.0",
-    "imagemin": "^7.0.1",
+    "html-minifier-terser": "^6.1.0",
+    "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^9.0.0",
+    "imagemin-svgo": "^10.0.0",
     "journalize": "^2.5.1",
     "lodash.debounce": "^4.0.8",
     "magic-string": "^0.25.7",
@@ -93,10 +97,10 @@
     "@datagraphics/cookbook": "^1.8.0",
     "@datagraphics/prettier-config": "^2.0.0",
     "@types/node": "^14.14.19",
-    "@zeit/git-hooks": "^0.1.4",
-    "np": "^7.5.0",
-    "preact": "^10.5.13",
+    "@vercel/git-hooks": "^1.0.0",
     "precise-commits": "^1.0.2",
+    "np": "^7.5.0",
+    "preact": "^10.6.0",
     "prettier": "^2.2.0"
   },
   "prettier": "@datagraphics/prettier-config"
