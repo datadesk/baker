@@ -79,7 +79,7 @@
     "parse-json": "^5.1.0",
     "postcss": "^8.2.14",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "premove": "^3.0.1",
+    "premove": "^4.0.0",
     "quaff": "^5.0.0",
     "require-from-string": "^2.0.2",
     "rev-path": "^3.0.0",
