@@ -63,7 +63,7 @@
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "dynamic-import-polyfill": "^0.1.1",
-    "fast-glob": "^3.2.8",
+    "fast-glob": "^3.2.10",
     "html-minifier-terser": "^6.1.0",
     "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
