@@ -86,7 +86,7 @@
     "rollup": "^2.64.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
-    "sass": "^1.48.0",
+    "sass": "^1.49.0",
     "simple-code-frame": "^1.1.1",
     "svelte": "^3.46.2",
     "svelte-preprocess": "^4.10.2",
