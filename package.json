@@ -83,7 +83,7 @@
     "quaff": "^5.0.0",
     "require-from-string": "^2.0.2",
     "rev-path": "^3.0.0",
-    "rollup": "^2.70.0",
+    "rollup": "^2.70.2",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
     "sass": "^1.49.9",
