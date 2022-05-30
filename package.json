@@ -41,7 +41,7 @@
     "@babel/core": "^7.18.2",
     "@babel/plugin-transform-react-jsx": "^7.16.5",
     "@babel/plugin-transform-runtime": "^7.17.0",
-    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-env": "^7.18.2",
     "@babel/preset-typescript": "^7.16.5",
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^21.0.2",
