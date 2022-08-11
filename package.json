@@ -95,7 +95,7 @@
   "devDependencies": {
     "@datagraphics/cookbook": "^1.13.3",
     "@datagraphics/prettier-config": "^2.0.0",
-    "@types/node": "^17.0.38",
+    "@types/node": "^18.7.1",
     "@vercel/git-hooks": "^1.0.0",
     "precise-commits": "^1.0.2",
     "np": "^7.6.1",
