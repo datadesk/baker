@@ -99,7 +99,7 @@
     "@vercel/git-hooks": "^1.0.0",
     "precise-commits": "^1.0.2",
     "np": "^7.6.2",
-    "preact": "^10.7.3",
+    "preact": "^10.10.6",
     "prettier": "^2.7.1"
   },
   "prettier": "@datagraphics/prettier-config"
