@@ -58,7 +58,7 @@
     "colorette": "^2.0.19",
     "core-js": "^3.25.0",
     "d3-dsv": "^2.0.0",
-    "date-fns": "^2.29.2",
+    "date-fns": "^2.29.3",
     "debug": "^4.3.4",
     "dotenv": "^16.0.2",
     "dotenv-expand": "^9.0.0",
