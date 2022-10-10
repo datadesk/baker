@@ -46,7 +46,7 @@
     "@rollup/plugin-babel": "^5.2.3",
     "@rollup/plugin-commonjs": "^22.0.2",
     "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
     "@rollup/plugin-replace": "^4.0.0",
     "@rollup/pluginutils": "^4.2.1",
     "@web/rollup-plugin-import-meta-assets": "^1.0.4",
