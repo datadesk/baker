@@ -28,8 +28,8 @@ Yes. Here are some examples of Baker is use outside of the Los Angeles Times.
 * [AMSAT’s amateur satellite index](https://amsat.org/amateur-satellite-index)
 * The ["First Visual Story"](https://palewi.re/docs/first-visual-story/) training tutorial by [Ben Welsh](https://palewi.re/who-is-ben-welsh/), [Armand Emamdjomeh](http://emamd.net/) and [Vanessa Martinez](https://www.vanessa-martinez.com/)
 * [The e.e. cummings free poetry archive](https://cummings.ee/) by [Ben Welsh](https://palewi.re/who-is-ben-welsh/)
-* [Noodle Tracker](https://noodletracker.com/) by Matt Stiles
-* [hotsauce.gay](https://hotsauce.gay/) and [men who don't move](https://caseymm.github.io/men-who-dont-move/) by Casey Miller
+* [Noodle Tracker](https://noodletracker.com/) by [Matt Stiles](https://mattstiles.me/)
+* [hotsauce.gay](https://hotsauce.gay/) and [men who don't move](https://caseymm.github.io/men-who-dont-move/) by [Casey Miller](https://caseymmiller.com/)
 * A variety of [news applications](https://projects.propublica.org/fortune-500-company-election-deniers-jan-6/) by [ProPublica](https://propublica.org)
 
 If you know of other examples, please add them to the list.
