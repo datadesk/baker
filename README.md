@@ -21,6 +21,19 @@ npm install -D @datagraphics/baker
 
 Baker is a development environment that can be converted into a static website that’s ready for the web. With a minimal amount of HTML, CSS and JavaScript, you can publish a project on latimes.com/projects. The Los Angeles Times uses Baker to write custom code for projects that aren’t possible within the rigid templates of our content management system.
 
+## Does anyone else use Baker?
+
+Yes. Here are some examples of Baker is use outside of the Los Angeles Times.
+
+* [AMSAT’s amateur satellite index](https://amsat.org/amateur-satellite-index)
+* The ["First Visual Story"](https://palewi.re/docs/first-visual-story/) training tutorial by [Ben Welsh](https://palewi.re/who-is-ben-welsh/), [Armand Emamdjomeh](http://emamd.net/) and [Vanessa Martinez](https://www.vanessa-martinez.com/)
+* [The e.e. cummings free poetry archive](https://cummings.ee/) by [Ben Welsh](https://palewi.re/who-is-ben-welsh/)
+* [Noodle Tracker](https://noodletracker.com/) by Matt Stiles
+* [hotsauce.gay](https://hotsauce.gay/) and [men who don't move](https://caseymm.github.io/men-who-dont-move/) by Casey Miller
+* A variety of [news applications](https://projects.propublica.org/fortune-500-company-election-deniers-jan-6/) by [ProPublica](https://propublica.org)
+
+If you know of other examples, please add them to the list.
+
 ## How does Baker work?
 
 Baker brings together a bunch of different technologies.
