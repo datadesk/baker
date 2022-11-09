@@ -31,7 +31,7 @@ Yes. Here are some examples of Baker is use outside of the Los Angeles Times.
 * [Noodle Tracker](https://noodletracker.com/) by [Matt Stiles](https://mattstiles.me/)
 * [hotsauce.gay](https://hotsauce.gay/) and [men who don't move](https://caseymm.github.io/men-who-dont-move/) by [Casey Miller](https://caseymmiller.com/)
 * A variety of [news applications](https://projects.propublica.org/fortune-500-company-election-deniers-jan-6/) by [ProPublica](https://propublica.org)
-* ["Did your neighborhood turn out to vote?"] by [THE CITY](https://www.thecity.nyc/)
+* ["Did your neighborhood turn out to vote?"](https://projects.thecity.nyc/zeldin-hochul-election-voter-turnout-nyc/) by [THE CITY](https://www.thecity.nyc/)
 
 If you know of other examples, please add them to the list.
 
