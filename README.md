@@ -4,7 +4,7 @@
 
 An example of how The Times puts the package to use is available at [datadesk/baker-example-page-template](https://github.com/datadesk/baker-example-page-template).
 
-[![npm](https://badgen.net/npm/v/@datagraphics/baker)](https://www.npmjs.org/package/@datagraphics/baker) [![install size](https://badgen.net/packagephobia/install/@datagraphics/baker)](https://packagephobia.now.sh/result?p=@datagraphics/baker)
+[![npm](https://badgen.net/npm/v/@datagraphics/baker)](https://www.npmjs.org/package/@datagraphics/baker)
 
 ## Requirements
 
