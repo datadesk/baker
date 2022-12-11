@@ -1,7 +1,7 @@
 {
   "name": "@datagraphics/baker",
   "type": "module",
-  "version": "0.43.0",
+  "version": "0.44.0",
   "exports": "./lib/index.js",
   "files": [
     "bin",
