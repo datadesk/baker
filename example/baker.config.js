@@ -11,10 +11,22 @@ export default {
     hydratable: true,
   },
   createPages(createPage, data) {
+    // Create robots.txt
+    createPage('robots.txt.njk', 'robots.txt');
+    const urlList = ['/', '/two/', '/three/'];
     for (const obj of data.meta.list) {
-      createPage('object.njk', `/object/${obj.toLowerCase()}.json`, {
-        obj,
+      // Create detail pages
+      const objUrl = `/object/${obj.toLowerCase()}/`;
+      createPage('object.njk', objUrl, { obj });
+      urlList.push(objUrl);
+      // Create JSON output
+      const jsonUrl = `/object/${obj.toLowerCase()}.json`;
+      createPage('object.json.njk', jsonUrl, {
+        obj: JSON.stringify({ value: obj }, null, 2)
       });
     }
+    createPage('sitemap.xml.njk', `sitemap.xml`, {
+      urlList,
+    });
   },
 };
