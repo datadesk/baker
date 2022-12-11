@@ -12,13 +12,9 @@ export default {
   },
   createPages(createPage, data) {
     for (const obj of data.meta.list) {
-        createPage(
-          'object.njk',
-          `/object/${obj.toLowerCase()}.json`,
-          {
-            obj
-          }
-        );
+      createPage('object.njk', `/object/${obj.toLowerCase()}.json`, {
+        obj,
+      });
     }
-  }
+  },
 };
