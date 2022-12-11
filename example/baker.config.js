@@ -22,7 +22,7 @@ export default {
       // Create JSON output
       const jsonUrl = `/object/${obj.toLowerCase()}.json`;
       createPage('object.json.njk', jsonUrl, {
-        obj: JSON.stringify({ value: obj }, null, 2)
+        obj: JSON.stringify({ value: obj }, null, 2),
       });
     }
     createPage('sitemap.xml.njk', `sitemap.xml`, {
