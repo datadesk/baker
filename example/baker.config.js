@@ -10,4 +10,15 @@ export default {
   svelteCompilerOptions: {
     hydratable: true,
   },
+  createPages(createPage, data) {
+    for (const obj of data.meta.list) {
+        createPage(
+          'object.njk',
+          `/object/${obj.toLowerCase()}.json`,
+          {
+            obj
+          }
+        );
+    }
+  }
 };
