@@ -61,7 +61,7 @@
     "date-fns": "^2.29.3",
     "debug": "^4.3.4",
     "dotenv": "^16.0.3",
-    "dotenv-expand": "^9.0.0",
+    "dotenv-expand": "^10.0.0",
     "dynamic-import-polyfill": "^0.1.1",
     "fast-glob": "^3.2.12",
     "html-minifier-terser": "^7.1.0",
