@@ -98,7 +98,7 @@
     "@types/node": "^18.11.18",
     "@vercel/git-hooks": "^1.0.0",
     "precise-commits": "^1.0.2",
-    "np": "^7.6.2",
+    "np": "^7.6.3",
     "preact": "^10.11.3",
     "prettier": "^2.8.1"
   },
