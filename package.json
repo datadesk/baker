@@ -70,7 +70,7 @@
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
-    "journalize": "^2.5.1",
+    "journalize": "^2.6.0",
     "lodash.debounce": "^4.0.8",
     "magic-string": "^0.27.0",
     "mini-sync": "^0.3.0",
