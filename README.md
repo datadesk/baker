@@ -30,7 +30,7 @@ Yes. Here are some examples of Baker is use outside of the Los Angeles Times.
 * [e.e. cummings free poetry archive](https://cummings.ee/) by [Ben Welsh](https://palewi.re/who-is-ben-welsh/)
 * [Noodle Tracker](https://noodletracker.com/) by [Matt Stiles](https://mattstiles.me/)
 * [hotsauce.gay](https://hotsauce.gay/) and [men who don't move](https://caseymm.github.io/men-who-dont-move/) by [Casey Miller](https://caseymmiller.com/)
-* A variety of [news applications](https://projects.propublica.org/fortune-500-company-election-deniers-jan-6/) by [ProPublica](https://propublica.org)
+* A variety of news applications by [ProPublica](https://propublica.org), including ["Does Your Local Museum or University Still Have Native American Remains?"](https://projects.propublica.org/repatriation-nagpra-database/) and ["Look Up Which Fortune 500 Companies Fund Election Deniers"](https://projects.propublica.org/fortune-500-company-election-deniers-jan-6/).
 * ["Did your neighborhood turn out to vote?"](https://projects.thecity.nyc/zeldin-hochul-election-voter-turnout-nyc/) and other features by [THE CITY](https://www.thecity.nyc/)
 * [Maryland precinct-level election results](https://www.thebaltimorebanner.com/politics-power/state-government/precinct-level-governor-election-vote-data-O25RWFHG35DEFCYOZNZDVRS374/) by [The Baltimore Banner](https://www.thebaltimorebanner.com/)
 
