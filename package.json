@@ -50,7 +50,7 @@
     "@rollup/plugin-replace": "^5.0.2",
     "@rollup/pluginutils": "^5.0.2",
     "@web/rollup-plugin-import-meta-assets": "^1.0.4",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.15",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-transform-async-to-promises": "^0.8.18",
     "chokidar": "^3.5.3",
