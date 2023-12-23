@@ -100,7 +100,7 @@
     "precise-commits": "^1.0.2",
     "np": "^7.6.3",
     "preact": "^10.11.3",
-    "prettier": "^3.0.3"
+    "prettier": "2.8.8"
   },
   "prettier": "@datagraphics/prettier-config"
 }
