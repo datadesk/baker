@@ -76,7 +76,7 @@
     "mini-sync": "^0.3.0",
     "mri": "^1.1.4",
     "nunjucks": "^3.2.4",
-    "parse-json": "^5.1.0",
+    "parse-json": "^8.1.0",
     "postcss": "^8.4.31",
     "postcss-flexbugs-fixes": "^5.0.2",
     "premove": "^4.0.0",
