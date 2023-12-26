@@ -23,6 +23,7 @@ const defaultConfig = {
   createPages: undefined,
   data: '_data',
   domain: undefined,
+  embeds: '_embeds',
   entrypoints: 'scripts/app.js',
   input: process.cwd(),
   layouts: '_layouts',
@@ -83,6 +84,7 @@ async function prepareConfig(inputOptions) {
   options.createPages = resolver('createPages');
   options.data = resolver('data');
   options.domain = resolver('domain');
+  options.embeds = resolver('embeds');
   options.entrypoints = resolver('entrypoints');
   options.input = resolver('input');
   options.layouts = resolver('layouts');
@@ -103,6 +105,7 @@ const mriConfig = {
     a: 'assets',
     c: 'config',
     d: 'data',
+    em: 'embeds', // not sure about this
     e: 'entrypoints',
     i: 'input',
     l: 'layouts',
@@ -135,6 +138,9 @@ async function run(args) {
     case 'bake':
     case 'build':
       try {
+        // see if there are any files in the _embeds folder
+        await baker.embedBake();
+        
         await baker.bake();
 
         console.log(green(bold('The build was a success!')));
