@@ -8,7 +8,7 @@ An example of how The Times puts the package to use is available at [datadesk/ba
 
 ## Requirements
 
-* [Node.js](https://nodejs.org/en/) version 12, 14 or 16, though at minimum 12.20, 14.14, or 16.0.
+* [Node.js](https://nodejs.org/en/) version 14 and higher
 * [Node Package Manager](https://www.w3schools.com/whatis/whatis_npm.asp)
 
 ## Installation
