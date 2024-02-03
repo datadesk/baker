@@ -8,7 +8,7 @@ An example of how The Times puts the package to use is available at [datadesk/ba
 
 ## Requirements
 
-* [Node.js](https://nodejs.org/en/) version 12, 14 or 16, though at minimum 12.20, 14.14, or 16.0.
+* [Node.js](https://nodejs.org/en/) version 14 and higher
 * [Node Package Manager](https://www.w3schools.com/whatis/whatis_npm.asp)
 
 ## Installation
@@ -33,6 +33,7 @@ Yes. Here are some examples of Baker is use outside of the Los Angeles Times.
 * A variety of news applications by [ProPublica](https://propublica.org), including ["Does Your Local Museum or University Still Have Native American Remains?"](https://projects.propublica.org/repatriation-nagpra-database/) and ["Look Up Which Fortune 500 Companies Fund Election Deniers"](https://projects.propublica.org/fortune-500-company-election-deniers-jan-6/).
 * ["Did your neighborhood turn out to vote?"](https://projects.thecity.nyc/zeldin-hochul-election-voter-turnout-nyc/) and other features by [THE CITY](https://www.thecity.nyc/)
 * [Maryland precinct-level election results](https://www.thebaltimorebanner.com/politics-power/state-government/precinct-level-governor-election-vote-data-O25RWFHG35DEFCYOZNZDVRS374/) by [The Baltimore Banner](https://www.thebaltimorebanner.com/)
+* [moneyinpolitics.wtf](https://moneyinpolitics.wtf/) by [Ben Welsh](https://palewi.re/who-is-ben-welsh/), Derek Willis, Anu Narayanswamy and Agustin Armendariz
 
 If you know of other examples, please add them to the list.
 
