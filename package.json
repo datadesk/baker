@@ -73,7 +73,7 @@
     "imagemin-svgo": "^10.0.1",
     "journalize": "^2.6.0",
     "lodash.debounce": "^4.0.8",
-    "magic-string": "^0.30.6",
+    "magic-string": "^0.30.7",
     "mini-sync": "^0.3.0",
     "mri": "^1.1.4",
     "nunjucks": "^3.2.4",
