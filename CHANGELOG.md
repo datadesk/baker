@@ -5,14 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Bump minimum version of Node to v18
+- Updated dependencies, including bringing Rollup all the way up to v4
+
 ## [0.45.0] - 2024-02-03
+
 - Added watcher for changes to `createPages` templates
 - Updated dependencies
 
 ## [0.44.1] - 2023-04-07
+
 - Updated dependencies
 
 ## [0.44.0] - 2022-12-10
+
 - Added support for rending API endpoints in JSON, sitemaps.xml and robots.txt
 - Added `createPages` to the test routine
 - Updated dependencies
@@ -20,41 +30,50 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.41.0] - 2022-11-09
 
 ### Changed
+
 - Updated dependencies
 
 ## [0.40.0] - 2021-12-04
 
 ### Changed
+
 - Updated dependencies
 
 ## [0.39.0] - 2021-11-23
 
 ### Changed
+
 - Refactored the package to comply with [ES module](https://nodejs.org/api/packages.html#determining-module-system) standards
 - Updated dependencies
 
 ## [0.38.0] - 2021-11-16
 
 ### Added
+
 - New `nunjucksVariables` config option to set global variables for all templates.
 
 ### Changed
+
 - Updated dependencies
 
 ## [0.37.0] - 2021-11-10
 
 ### Added
+
 - New `NOW` global variable with the current timestamp returned by `new Date()`
 
 ### Changed
+
 - Updated dependencies
 
 ## [0.36.0] - 2021-10-30
 
 ### Added
+
 - Added new `minifyOptions` option to allow users to override the default configuration
 
 ### Changed
+
 - Updated dependencies
 
 ## [0.34.0] - 2021-06-23
@@ -78,15 +97,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.32.0] - 2021-04-14
 
 ### Changed
+
 - The `{% static %}` tag will now pass through full URLs as-is when used as the parameter. This lets developers not have to worry about whether a path is project relative or not in loops, and allows templates that work with files to easily account for local and remote files.
 
 ## [0.31.2] - 2021-02-22
 
 ### Added
+
 - Add `preventAssignment: true` to `@rollup/plugin-replace` options.
 
 ### Fixed
+
 - Make sure `process.exit(1)` is called when builds fail.
+
 ## [0.31.1] - 2021-01-31
 
 ### Fixed
