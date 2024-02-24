@@ -9,7 +9,7 @@
     "svelte.config.js"
   ],
   "engines": {
-    "node": ">=14.13.1"
+    "node": ">=18"
   },
   "bin": {
     "bake": "./bin/bake.js"
