@@ -86,6 +86,9 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# Mac junk files
+.DS_Store
+
 # example directories to ignore
 example/_dist
 example-simple/_dist
