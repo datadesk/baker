@@ -97,7 +97,7 @@
     "@datagraphics/prettier-config": "^2.0.0",
     "@types/node": "^18.15.11",
     "@vercel/git-hooks": "^1.0.0",
-    "np": "^7.6.3",
+    "np": "^10.0.2",
     "preact": "^10.19.3",
     "precise-commits": "^1.0.2",
     "prettier": "^2.8.8"
