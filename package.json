@@ -77,7 +77,7 @@
     "mri": "^1.1.4",
     "nunjucks": "^3.2.4",
     "parse-json": "^8.1.0",
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.38",
     "postcss-flexbugs-fixes": "^5.0.2",
     "premove": "^4.0.0",
     "quaff": "^5.0.0",
