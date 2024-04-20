@@ -140,7 +140,7 @@ async function run(args) {
       try {
         // see if there are any files in the _embeds folder
         await baker.embedBake();
-        
+
         await baker.bake();
 
         console.log(green(bold('The build was a success!')));
