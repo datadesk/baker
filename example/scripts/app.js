@@ -8,6 +8,14 @@ if (process.env.BAKER_AWS_BUCKET === 'bigbuilder') {
   console.log(list);
 }
 
+class CustomElement extends HTMLElement {
+  constructor() {
+    super();
+    this.innerHTML = '<marquee>HELLO</marquee>';
+  }
+}
+customElements.define('custom-element', CustomElement);
+
 async function main() {
   const { intcomma } = await import('journalize');
   console.log(intcomma(5432));
