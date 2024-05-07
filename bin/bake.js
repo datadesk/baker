@@ -138,8 +138,9 @@ async function run(args) {
     case 'bake':
     case 'build':
       try {
-        // see if there are any files in the _embeds folder
-        await baker.embedBake();
+        // come back to this
+        // // see if there are any files in the _embeds folder
+        // await baker.embedBake();
 
         await baker.bake();
 
