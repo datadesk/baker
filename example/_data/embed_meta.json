@@ -1,5 +1,4 @@
 {
-    "embed": "true",
-    "list": ["This", "is", "an", "embed"]
-  }
-  
+  "embed": "true",
+  "list": ["This", "is", "an", "embed"]
+}
