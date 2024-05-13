@@ -23,7 +23,7 @@ const defaultConfig = {
   createPages: undefined,
   data: '_data',
   domain: undefined,
-  embeds: '_embeds',
+  embeds: 'embeds',
   entrypoints: 'scripts/app.js',
   input: process.cwd(),
   layouts: '_layouts',
@@ -139,7 +139,7 @@ async function run(args) {
     case 'build':
       try {
         // come back to this
-        // // see if there are any files in the _embeds folder
+        // // see if there are any files in the embeds folder
         // await baker.embedBake();
 
         await baker.bake();

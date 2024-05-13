@@ -1,8 +1,14 @@
 {% extends 'base.njk' %}
 
+{% set meta = embed_meta %}
+
 {% block content %}
 <div class="web-component-example">
     <h3>I am a web component</h3>
+    {{ meta.embed }}
+    {% for i in meta.list %}
+        {{ i }}
+    {% endfor %}
 </div>
 
 {% endblock content %}
