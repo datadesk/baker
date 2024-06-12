@@ -34,6 +34,7 @@ const defaultConfig = {
   output: '_dist',
   pathPrefix: '/',
   staticRoot: '',
+  crosswalkPath: undefined,
 };
 
 function getDefaultFromConfig(module) {
@@ -94,6 +95,7 @@ async function prepareConfig(inputOptions) {
   options.pathPrefix = resolver('pathPrefix');
   options.staticRoot = resolver('staticRoot');
   options.svelteCompilerOptions = resolver('svelteCompilerOptions');
+  options.crosswalkPath = resolver('crosswalkPath');
 
   return options;
 }
