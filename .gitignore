@@ -88,4 +88,12 @@ typings/
 
 # example directories to ignore
 example/_dist
+example/.DS_Store
 example-simple/_dist
+example-simple/.DS_Store
+
+# IntelliJ
+.idea
+
+.DS_Store
+
