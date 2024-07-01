@@ -75,6 +75,7 @@
     "magic-string": "^0.30.6",
     "mini-sync": "^0.3.0",
     "mri": "^1.1.4",
+    "node-fetch": "^3.3.2",
     "nunjucks": "^3.2.4",
     "parse-json": "^8.1.0",
     "postcss": "^8.4.31",
