@@ -8,7 +8,7 @@
   <div id="svelte"></div>
   <div id="preact"></div>
 
-  {% staticabsolute 'styles/main.scss' %}
+  {% static 'styles/main.scss' %}
 
   {% static 'assets/demo.json' %}
 
@@ -18,7 +18,7 @@
   We are in production!
   {% endif %}
   {{ page|log }}
-  
+
   <div id="now">NOW: {{ NOW|date('yyyy-M-dd') }}</div>
   <div id="global-var">FOO: {{ FOO }}</div>
 
