@@ -7,6 +7,10 @@ export default {
   // we want to use the static root feature, so we supply the path
   staticRoot: '/static/',
 
+  // pathPrefix and domain are required
+  pathPrefix: '/',
+  domain: 'https://www.latimes.com',
+
   // use createPages to generate pages on the fly
   createPages(createPage, data) {
     for (const title of data.titles) {
