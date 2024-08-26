@@ -1,7 +1,7 @@
 export default {
   input: './example',
   entrypoints: 'scripts/{app,client}.{js,ts}',
-  pathPrefix: '/a',
+  pathPrefix: '/',
   domain: 'https://www.latimes.com',
   nunjucksVariables: {
     FOO: 'bar',
