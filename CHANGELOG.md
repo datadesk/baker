@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.46.0] - 2024-07-22
 - `prepareCrosswalk` deprecated from baker config in favor of built-in crosswalk data handling.
 - Remove `staticAbsoluteBlock`. All static assets use absolute paths now
+- Audio file (`.mp3`) is now recognized by `AssetsEngine` and will be included in any hashing.
+- Extended Image files to include (`.webp`, `.avif`).
 
 ## [0.45.0] - 2024-02-03
 - Added watcher for changes to `createPages` templates
