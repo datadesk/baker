@@ -23,6 +23,7 @@ const defaultConfig = {
   createPages: undefined,
   data: '_data',
   domain: undefined,
+  embeds: 'embeds',
   entrypoints: 'scripts/app.js',
   input: process.cwd(),
   layouts: '_layouts',
@@ -34,6 +35,7 @@ const defaultConfig = {
   output: '_dist',
   pathPrefix: '/',
   staticRoot: '',
+  crosswalkPath: undefined,
 };
 
 function getDefaultFromConfig(module) {
@@ -83,6 +85,7 @@ async function prepareConfig(inputOptions) {
   options.createPages = resolver('createPages');
   options.data = resolver('data');
   options.domain = resolver('domain');
+  options.embeds = resolver('embeds');
   options.entrypoints = resolver('entrypoints');
   options.input = resolver('input');
   options.layouts = resolver('layouts');
@@ -94,6 +97,7 @@ async function prepareConfig(inputOptions) {
   options.pathPrefix = resolver('pathPrefix');
   options.staticRoot = resolver('staticRoot');
   options.svelteCompilerOptions = resolver('svelteCompilerOptions');
+  options.crosswalkPath = resolver('crosswalkPath');
 
   return options;
 }
