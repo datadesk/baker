@@ -23,7 +23,6 @@ const defaultConfig = {
   createPages: undefined,
   data: '_data',
   domain: undefined,
-  webHookUrl: undefined,
   embeds: 'embeds',
   entrypoints: 'scripts/app.js',
   input: process.cwd(),
@@ -86,7 +85,6 @@ async function prepareConfig(inputOptions) {
   options.createPages = resolver('createPages');
   options.data = resolver('data');
   options.domain = resolver('domain');
-  options.webHookUrl = resolver('webHookUrl');
   options.embeds = resolver('embeds');
   options.entrypoints = resolver('entrypoints');
   options.input = resolver('input');
