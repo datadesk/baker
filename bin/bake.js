@@ -151,7 +151,17 @@ async function run(args) {
       }
       break;
     case 'screenshot':
-      await baker.screenshot();
+      try {
+        await baker.screenshot();
+
+        console.log(green(bold('The screenshot was a success!')));
+      } catch (err) {
+        console.log(
+          red(bold("Screenshot failed. Here's what possibly went wrong:\n"))
+        );
+        logErrorMessage(err);
+        process.exit(1);
+      }
       break;
     case 'serve':
       await baker.serve();
