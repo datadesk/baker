@@ -32,7 +32,7 @@ const defaultConfig = {
   nunjucksTags: undefined,
   minifyOptions: undefined,
   svelteCompilerOptions: undefined,
-  output: '_dist',
+  output: process.env.SCREENSHOT ? '_screenshot' : '_dist',
   pathPrefix: '/',
   staticRoot: '',
   crosswalkPath: undefined,
@@ -149,6 +149,9 @@ async function run(args) {
         logErrorMessage(err);
         process.exit(1);
       }
+      break;
+    case 'screenshot':
+      await baker.screenshot();
       break;
     case 'serve':
       await baker.serve();

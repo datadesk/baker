@@ -17,6 +17,7 @@
   "scripts": {
     "build": "./bin/bake.js build --config example/baker.config.js",
     "build:simple": "./bin/bake.js build --config example-simple/baker.config.js",
+    "build:screenshot": "SCREENSHOT=true ./bin/bake.js screenshot --config example/baker.config.js",
     "release": "np --no-yarn --no-tests",
     "git-pre-commit": "precise-commits",
     "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
