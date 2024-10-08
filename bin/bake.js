@@ -16,6 +16,9 @@ import { logErrorMessage } from '../lib/utils.js';
 
 const logger = debug('baker:cli');
 
+const OUTPUT_DIR = '_dist';
+const SCREENSHOT_DIR = '_screenshot';
+
 const defaultConfigFile = 'baker.config.js';
 
 const defaultConfig = {
@@ -32,7 +35,7 @@ const defaultConfig = {
   nunjucksTags: undefined,
   minifyOptions: undefined,
   svelteCompilerOptions: undefined,
-  output: process.env.SCREENSHOT ? '_screenshot' : '_dist',
+  output: OUTPUT_DIR,
   pathPrefix: '/',
   staticRoot: '',
   crosswalkPath: undefined,
@@ -151,8 +154,12 @@ async function run(args) {
       }
       break;
     case 'screenshot':
+      // Change a few config options for taking screenshots
+      const screenshotConfig = { ...config, output: SCREENSHOT_DIR };
+      const screenshotBaker = new Baker(screenshotConfig);
+
       try {
-        await baker.screenshot();
+        await screenshotBaker.screenshot();
 
         console.log(green(bold('The screenshot was a success!')));
       } catch (err) {
