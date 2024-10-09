@@ -17,6 +17,7 @@
   "scripts": {
     "build": "./bin/bake.js build --config example/baker.config.js",
     "build:simple": "./bin/bake.js build --config example-simple/baker.config.js",
+    "build:screenshot": "NODE_ENV=development ./bin/bake.js screenshot --config example/baker.config.js",
     "release": "np --no-yarn --no-tests",
     "git-pre-commit": "precise-commits",
     "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
@@ -81,6 +82,7 @@
     "postcss": "^8.4.31",
     "postcss-flexbugs-fixes": "^5.0.2",
     "premove": "^4.0.0",
+    "puppeteer": "^13.7.0",
     "quaff": "^5.0.0",
     "require-from-string": "^2.0.2",
     "rev-path": "^3.0.0",

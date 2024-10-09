@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.47.0] - 2024-10-02
 - Removed `webHookUrl` from baker.config 
+- Added `screenshot` task to baker for fallback image generation
 
 ## [0.46.0] - 2024-08-30
 - `prepareCrosswalk` deprecated from baker config in favor of built-in crosswalk data handling.

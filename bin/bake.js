@@ -16,6 +16,9 @@ import { logErrorMessage } from '../lib/utils.js';
 
 const logger = debug('baker:cli');
 
+const OUTPUT_DIR = '_dist';
+const SCREENSHOT_DIR = '_screenshot';
+
 const defaultConfigFile = 'baker.config.js';
 
 const defaultConfig = {
@@ -32,7 +35,7 @@ const defaultConfig = {
   nunjucksTags: undefined,
   minifyOptions: undefined,
   svelteCompilerOptions: undefined,
-  output: '_dist',
+  output: OUTPUT_DIR,
   pathPrefix: '/',
   staticRoot: '',
   crosswalkPath: undefined,
@@ -145,6 +148,23 @@ async function run(args) {
       } catch (err) {
         console.log(
           red(bold("Build failed. Here's what possibly went wrong:\n"))
+        );
+        logErrorMessage(err);
+        process.exit(1);
+      }
+      break;
+    case 'screenshot':
+      // Change a few config options for taking screenshots
+      const screenshotConfig = { ...config, output: SCREENSHOT_DIR };
+      const screenshotBaker = new Baker(screenshotConfig);
+
+      try {
+        await screenshotBaker.screenshot();
+
+        console.log(green(bold('The screenshot was a success!')));
+      } catch (err) {
+        console.log(
+          red(bold("Screenshot failed. Here's what possibly went wrong:\n"))
         );
         logErrorMessage(err);
         process.exit(1);
