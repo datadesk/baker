@@ -28,6 +28,7 @@ const defaultConfig = {
   domain: undefined,
   embeds: 'embeds',
   entrypoints: 'scripts/app.js',
+  imageSrcSizes: undefined,
   input: process.cwd(),
   layouts: '_layouts',
   nunjucksVariables: undefined,
@@ -90,6 +91,7 @@ async function prepareConfig(inputOptions) {
   options.domain = resolver('domain');
   options.embeds = resolver('embeds');
   options.entrypoints = resolver('entrypoints');
+  options.imageSrcSizes = resolver('imageSrcSizes');
   options.input = resolver('input');
   options.layouts = resolver('layouts');
   options.nunjucksVariables = resolver('nunjucksVariables');
