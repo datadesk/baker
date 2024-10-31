@@ -84,7 +84,6 @@
     "premove": "^4.0.0",
     "puppeteer": "^13.7.0",
     "quaff": "^5.0.0",
-    "require-from-string": "^2.0.2",
     "rev-path": "^3.0.0",
     "rollup": "^2.79.1",
     "rollup-plugin-svelte": "^7.1.6",

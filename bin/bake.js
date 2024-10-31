@@ -8,7 +8,6 @@ import { resolve } from 'path';
 import debug from 'debug';
 import mri from 'mri';
 import { rollup } from 'rollup';
-import requireFromString from 'require-from-string';
 
 // local
 import { Baker } from '../lib/index.js';
@@ -60,7 +59,7 @@ async function compileAndLoadConfig(pathToConfig) {
     format: 'cjs',
     interop: 'auto',
   });
-  const loadedConfig = requireFromString(code, pathToConfig);
+  const loadedConfig = await import(code, pathToConfig);
 
   return getDefaultFromConfig(loadedConfig);
 }
