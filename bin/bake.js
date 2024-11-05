@@ -80,7 +80,7 @@ async function betterPrepareConfig(flags) {
 
   const mergedConfig = {
     ...defaultConfig,
-    ...projectConfig
+    ...projectConfig,
   };
 
   console.log('betterPrepareConfig:mergedConfig');
