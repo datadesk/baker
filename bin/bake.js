@@ -40,9 +40,9 @@ const defaultConfig = {
   crosswalkPath: undefined,
 };
 
-// function getDefaultFromConfig(module) {
-//   return module.__esModule ? module.default : module;
-// }
+function getDefaultFromModule(module) {
+  return module.__esModule ? module.default : module;
+}
 
 // async function compileAndLoadConfig(pathToConfig) {
 //   const bundle = await rollup({
@@ -60,18 +60,33 @@ const defaultConfig = {
 //   });
 //   const loadedConfig = requireFromString(code, pathToConfig);
 //
-//   return getDefaultFromConfig(loadedConfig);
+//   return getDefaultFromModule(loadedConfig);
 // }
 
 async function betterPrepareConfig(flags) {
+  console.log('betterPrepareConfig:flags');
+  console.log(JSON.stringify(flags, null, 3));
+
   const { input, config } = flags;
   const projectConfigFilePath = resolve(input, !!config ? config : defaultConfigFile);
-  const projectConfig = await import(projectConfigFilePath);
+  const projectConfigFile = await import(projectConfigFilePath);
 
-  return {
+  console.log('betterPrepareConfig:projectConfigFile');
+  console.log(projectConfigFile);
+
+  const projectConfig = getDefaultFromModule(projectConfigFile);
+  console.log('betterPrepareConfig:projectConfig');
+  console.log(projectConfig.default);
+
+  const mergedConfig = {
     ...defaultConfig,
     ...projectConfig
   };
+
+  console.log('betterPrepareConfig:mergedConfig');
+  console.log(JSON.stringify(mergedConfig, null, 3));
+
+  return mergedConfig;
 }
 
 // async function prepareConfig(inputOptions) {
