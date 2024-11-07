@@ -68,6 +68,11 @@ async function betterPrepareConfig(flags) {
   console.log(JSON.stringify(flags, null, 3));
 
   const { input, config } = flags;
+  console.log('betterPrepareConfig:input');
+  console.log(input);
+  console.log('betterPrepareConfig:config');
+  console.log(config);
+
   const projectConfigFilePath = resolve(input, !!config ? config : defaultConfigFile);
   const projectConfigFile = await import(projectConfigFilePath);
 
