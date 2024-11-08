@@ -15,7 +15,6 @@ import { logErrorMessage } from '../lib/utils.js';
 const logger = debug('baker:cli');
 
 const OUTPUT_DIR = '_dist';
-const SCREENSHOT_DIR = '_screenshot';
 
 const defaultConfigFile = 'baker.config.js';
 
