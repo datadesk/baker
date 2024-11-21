@@ -37,6 +37,7 @@ const defaultConfig = {
   svelteCompilerOptions: undefined,
   output: OUTPUT_DIR,
   pathPrefix: '/',
+  port: 80,
   staticRoot: '',
   crosswalkPath: undefined,
 };
