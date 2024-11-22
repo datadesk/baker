@@ -1,0 +1,63 @@
+diff --git a/node_modules/mini-sync/server.js b/node_modules/mini-sync/server.js
+index 5a26905..63704a1 100644
+--- a/node_modules/mini-sync/server.js
++++ b/node_modules/mini-sync/server.js
+@@ -61,6 +61,7 @@ const clientScript = fs.readFileSync(resolve(__dirname, pkg['umd:main']));
+  * @property {string} local The localhost URL for the static site
+  * @property {string} network The local networked URL for the static site
+  * @property {number} port The port the server ended up on
++ * @property {string} hostname The hostname the server should bind to
+  */
+ 
+ /**
+@@ -90,7 +91,7 @@ const clientScript = fs.readFileSync(resolve(__dirname, pkg['umd:main']));
+  * await server.close();
+  *
+  */
+-function create({ dir = process.cwd(), port = 3000 } = {}) {
++function create({ dir = process.cwd(), port = 3000, hostname = '127.0.0.1' } = {}) {
+   // create a raw instance of http.Server so we can hook into it
+   const server = http.createServer();
+ 
+@@ -190,20 +191,13 @@ function create({ dir = process.cwd(), port = 3000 } = {}) {
+    * @returns {Promise<StartReturn>}
+    */
+   function start() {
++    let interval;
++
+     return new Promise((resolve, reject) => {
+       server.on('error', (e) => {
+-        if (e.code === 'EADDRINUSE') {
+-          setTimeout(() => {
+-            server.close();
+-            server.listen(++port);
+-          }, 100);
+-        } else {
+-          reject(e);
+-        }
++        reject(e);
+       });
+ 
+-      let interval;
+-
+       server.on('listening', () => {
+         // ping every 10 seconds
+         interval = setInterval(sendPing, 10e3);
+@@ -211,7 +205,7 @@ function create({ dir = process.cwd(), port = 3000 } = {}) {
+         // get paths to networks
+         const { local, network } = access({ port });
+ 
+-        resolve({ local, network, port });
++        resolve({ local, network, port, hostname });
+       });
+ 
+       server.on('close', () => {
+@@ -221,7 +215,7 @@ function create({ dir = process.cwd(), port = 3000 } = {}) {
+         }
+       });
+ 
+-      app.listen(port);
++      app.listen(port, hostname);
+     });
+   }
+ 
