@@ -37,6 +37,7 @@ const defaultConfig = {
   svelteCompilerOptions: undefined,
   output: OUTPUT_DIR,
   pathPrefix: '/',
+  port: 3000,
   staticRoot: '',
   crosswalkPath: undefined,
 };
@@ -98,6 +99,7 @@ async function prepareConfig(inputOptions) {
   options.minifyOptions = resolver('minifyOptions');
   options.output = resolver('output');
   options.pathPrefix = resolver('pathPrefix');
+  options.port = resolver('port');
   options.staticRoot = resolver('staticRoot');
   options.svelteCompilerOptions = resolver('svelteCompilerOptions');
   options.crosswalkPath = resolver('crosswalkPath');
