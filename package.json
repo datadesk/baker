@@ -1,7 +1,7 @@
 {
   "name": "@datagraphics/baker",
   "type": "module",
-  "version": "0.47.4",
+  "version": "0.47.5",
   "exports": "./lib/index.js",
   "files": [
     "bin",
@@ -21,7 +21,8 @@
     "release": "np --no-yarn --no-tests",
     "git-pre-commit": "precise-commits",
     "serve:simple": "NODE_ENV=development ./bin/bake.js serve --config example-simple/baker.config.js",
-    "start": "NODE_ENV=development ./bin/bake.js serve --config example/baker.config.js"
+    "start": "NODE_ENV=development ./bin/bake.js serve --config example/baker.config.js",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,7 @@
     "static",
     "generator"
   ],
-  "author": "Ryan Murphy",
+  "author": "CalTimes News Apps",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/datadesk/baker/issues"
@@ -79,6 +80,7 @@
     "node-fetch": "^3.3.2",
     "nunjucks": "^3.2.4",
     "parse-json": "^8.1.0",
+    "patch-package": "^8.0.0",
     "postcss": "^8.4.31",
     "postcss-flexbugs-fixes": "^5.0.2",
     "premove": "^4.0.0",
