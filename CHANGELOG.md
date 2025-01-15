@@ -5,9 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.47.5] - 2024-12-05
+## [0.47.6] - 2025-01-15
+- Adjusted viewport settings to dynamically fix content height and add 20px bottom padding for fallback images
 
-### Changed
+## [0.47.5] - 2024-12-05
 - Patched mini-sync to run on 127.0.0.1 and added option `port` option to baker config
 
 ## [0.47.4] - 2024-11-07
