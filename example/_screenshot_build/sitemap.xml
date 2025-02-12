@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+  <loc>/</loc>
+</url>
+<url>
+  <loc>/two/</loc>
+</url>
+<url>
+  <loc>/three/</loc>
+</url>
+<url>
+  <loc>/object/this/</loc>
+</url>
+<url>
+  <loc>/object/should/</loc>
+</url>
+<url>
+  <loc>/object/fail/</loc>
+</url>
+</urlset>

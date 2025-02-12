@@ -1,0 +1,1 @@
+{"version":3,"file":"internal.chunk.js","sources":["../../../scripts/nested/internal.js"],"sourcesContent":["export async function getData() {\n  const data = await import('dataset:../cdcr.json');\n  return data;\n}\n"],"names":["getData","data"],"mappings":"AAAO,eAAeA,OAAOA,GAAG;AAC9B,EAAA,MAAMC,IAAI,GAAG,MAAM,WAAO,iBAAsB,CAAC,CAAA;AACjD,EAAA,OAAOA,IAAI,CAAA;AACb;;;;"}
