@@ -89,6 +89,7 @@ typings/
 # example directories to ignore
 example/_dist
 example/_screenshot
+example/_fallbacks
 example/.DS_Store
 example-simple/_dist
 example-simple/.DS_Store
