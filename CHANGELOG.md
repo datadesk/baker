@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Check that path exists before calling `getStaticPath` on crosswalk assets in `prepareCrosswalk`
-- GIF compatibility for crosswalk assets in `prepareCrosswalk`
 
 ## [0.47.7] - 2024-02-13
 
